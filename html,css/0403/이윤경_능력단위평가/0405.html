@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .left_menu {
+            width: 100px;
+            height: 1280px;
+            position: fixed;
+            background-color: gainsboro;
+        }
+
+        .left_icon {
+            width: 50px;
+            height: 50px;
+            padding: 20px 25px;
+            margin-bottom: 30px;
+        }
+
+
+        header {
+            background-image: url(/0403/header_img.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 1920px;
+            height: 450px;
+
+        }
+
+
+        .header_cf{
+            width: 300px;
+            height: 150px;
+            background-image: url(/snow.jpg);
+            background-repeat: no-repeat;
+            position: absolute;
+            margin-left: 1500px;
+            margin-top: 200px;
+        }
+
+        .right_menu,
+        .container,
+        header {
+            padding-left: 120px;
+        }
+
+        .right_menu {
+            width: 1920px;
+            height: 60px;
+            border-bottom: 2px solid grey;
+        }
+
+        .menu_ul {
+            display: inline-block;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .menu_ul li {
+            float: left;
+            padding: 5px 150px;
+            line-height: 70px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+
+        h1 {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .container {
+            height: 550px;
+        }
+
+        .form_ul li {
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 15%;
+            height: 30px;
+            outline:none;
+            border-color: gainsboro;
+            border-radius: 5px;
+        }
+
+        span {
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        label {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        form {
+            text-align: center;
+        }
+
+    
+
+        textarea{
+            width: 400px;
+            height: 200px;
+            outline:none;
+            border-color: gainsboro;
+            border-radius: 5px;
+        }
+
+        select{
+            width: 100px;
+            height: 30px;
+            outline:none;
+            border-color: gainsboro;
+            border-radius: 5px;
+        
+        }
+        .btn_a {
+            border-radius: 5px;
+            width: 90px;
+            height: 40px;
+            background-color: rgb(76, 143, 231);
+            color: white;
+            border: none;
+        }
+
+        .btn_b {
+            border-radius: 5px;
+            width: 90px;
+            height: 40px;
+            background-color: rgb(76, 143, 231);
+            color: white;
+            border: none;
+            margin-left: 500px;
+            
+        }
+
+        .btn{
+            width: 850px;
+            display: inline-block;
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+    <nav class="left_menu">
+        <ul class="left">
+            <li> <img class="left_icon" src="/image/home.png"> </li>
+            <li> <img class="left_icon" src="/0403/cup.png"> </li>
+            <li> <img class="left_icon" src="/0403/picture.png"> </li>
+            <li> <img class="left_icon" src="/0403/tv.png"> </li>
+            <li> <img class="left_icon" src="/0403/headphone.png"> </li>
+        </ul>
+    </nav>
+    <header>
+        <div class="header_cf"></div>
+    </header>
+    <nav class="right_menu">
+        <ul class="menu_ul">
+            <li>HOME</li>
+            <li>COFFEE</li>
+            <li>CF</li>
+            <li>PRINT</li>
+            <li>문의하기</li>
+        </ul>
+    </nav>
+
+
+
+
+    <div class="container">
+        <h1>제품 문의하기</h1>
+
+        <form method="POST">
+            <ul class="form_ul">
+                <li><label name="name" id="name">제목</label>
+                    <input type="text" placeholder="제목을 입력해주세요">
+                </li>
+
+                <li><label name="writer" id="writer">작성자</label>
+                    <input type="text" required placeholder="작성하신분 성함을 입력해주세요">
+                </li>
+
+                <li><label name="mail" id="mail">답변받을 이메일</label>
+                    <input type="text" placeholder="이메일 주소"> <span>@</span>
+                    <select>
+                        <option>gmail.com</option>
+                        <option>naver.com</option>
+                        <option>hanmail.com</option>
+                        <option>직접입력</option>
+                    </select>
+                </li>
+                  
+                
+                <li><label name="question" id="question">문의내용</label>
+                    <textarea placeholder="문의 내용을 입력해주세요"></textarea>
+                </li>
+
+
+                <div class="btn">
+                <button class="btn_a">문의하기</button>
+
+
+                <button class="btn_b" type="reset">초기화 </button>
+                </div>
+
+            </ul>
+        </form>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        코드:제품,사람,학생들에 대한 고유번호 체계
+        
+        제조사번호:물품종류-고유코드
+
+        물품종류: 1.식품 2.전자제품 3.의약품 4.생활용품
+        1~4해당하는값이아니면 코드오류
+    
+        SM1313-3-Re2221
+        
+        */
+
+        var codeNo = prompt("제품코드 입력");
+        var code = codeNo.substring(codeNo.indexOf("-") + 1, codeNo.lastIndexOf("-"));
+        /* var code = codeNo.substring(codeNo.indexOf("-")+1,codeNo.lastIndexOf("-"));*/
+
+        document.write("입력한 물품은", codeNo, "입니다");
+        console.log(code);
+        switch (code) {
+            case "1":
+                document.write("입력물품은 식품입니다.","<br>");
+
+            case "2":
+                document.write("입력물품은 전자제품입니다.","<br>");
+
+            case "3":
+                document.write("입력물품은 의약품입니다.","<br>");
+
+            case "4":
+                document.write("입력물품은 생활용품입니다.","<br>");
+
+            default:
+                document.write("입력한 코드오류","<br>")
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

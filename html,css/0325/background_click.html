@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 400px;
+            height: 400px;
+            padding: 50px;
+            border: 20px dashed black;
+            background-color: aliceblue;
+
+            /*background-clip
+            배경(색상,이미지)을 어디 영역까지 채울 건가*/
+            background-clip: content-box;
+        }
+
+        .clip_text{
+            font-size: 40px;
+            font-weight: bold;
+            background-image: url(/snow.jpg);
+            background-clip: text;
+            /*클리핑 마스크*/
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+
+    <hr>
+
+    <div class="clip_text">
+        글자 투명화 테스트
+    </div>
+</body>
+</html>

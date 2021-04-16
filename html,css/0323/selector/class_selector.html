@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>클래스 선택자 .</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <style>
+        table {
+            /*테이블 테두리 선을 하나로 설정*/
+            border-collapse: collapse;
+        }
+
+        /*그룹선택자*/
+        th,
+        td {
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        .red {
+            color: salmon;
+            text-decoration: underline;
+        }
+
+        .under {color: azure;
+            text-decoration: underline;
+        }
+        
+        #blue{
+            color:blue;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <table>
+        <thead>
+            <tr>
+                <th class="under" id="blue">번호</th>
+                <th class="under" id="blue">제목</th>
+                <th class="under" id="blue">작성자</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+            <tr>
+                <td>1</td>
+                <td>국민의 모든 자유와 권리는 국가안전보장·질서유지 또는 공공복리를 위하여 필요한 경우에 한하여 법률로써 제한할 수 있으며, 제한하는 경우에도 자유와 권리의 본질적인 내용을 침해할 수
+                    없다.</td>
+                <td class="red">김부식</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>헌법재판소의 조직과 운영 기타 필요한 사항은 법률로 정한다.</td>
+                <td class="red">권율</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>피고인의 자백이 고문·폭행·협박·구속의 부당한 장기화 또는 기망 기타의 방법에 의하여 자의로 진술된 것이 아니라고 인정될 때 또는 정식재판에 있어서 피고인의 자백이 그에게 불리한
+                    유일한 증거일 때에는 이를 유죄의 증거로 삼거나 이를 이유로 처벌할 수 없다.</td>
+                <td class="red"> 한석봉</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>국민의 자유와 권리는 헌법에 열거되지 아니한 이유로 경시되지 아니한다.</td>
+                <td class="red">조헌</td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>누구든지 체포 또는 구속을 당한 때에는 적부의 심사를 법원에 청구할 권리를 가진다.</td>
+                <td class="red">계백</td>
+            </tr>
+
+            <tr>
+                <td>6</td>
+                <td>대통령은 법률이 정하는 바에 의하여 사면·감형 또는 복권을 명할 수 있다.</td>
+                <td class="red">이완용</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+
+</body>
+
+</html>

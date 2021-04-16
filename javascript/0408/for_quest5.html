@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+        /*
+                var num = 1;
+                var table = "<table>"
+                for (i = 0; i < 5; i++) {
+                    table += "<tr>";
+                    for (j = 0; j < 4 - i ; j++) {
+                        table += "<td></td>"
+                    }
+        
+                    for (j = 0; j <= i+1; j++, num++) {
+                        table += "<td>" + num + "</td>";
+        
+                    }
+        
+        
+                    for (j = 0; j < 4 + i; j++) {
+                        table += "<td></td>"
+                    }
+                    table += "</tr>";
+        
+                }
+                table += "</table>";
+                document.write(table);
+        */
+
+        var num = 1;
+        var table = "<table>"
+        for (i = 0; i < 5; i++) {
+            table += "<tr>";
+            for (j = 0; j < 5 - i-1; j++) {
+                table += "<td class='bg_yellow'></td>"
+            }
+            
+            for (j = 0; j < 0 + (i*2)+1; j++, num++) {
+                table += "<td class='bg_green'>" + num + "</td>"
+            }
+
+            for (j = 0; j < 5 - i -1; j++) {
+                table += "<td class='bg_yellow'></td>"
+            }
+            table += "</tr>";
+
+        }
+        table += "</table>";
+        document.write(table);
+
+    </script>
+    <style>
+
+        table {
+            border-collapse: collapse;
+            color: white;
+        }
+
+        td {
+            text-align: center;
+            vertical-align: middle;
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            padding: 15px;
+            font-size: 28px;
+        }
+
+        .bg_yellow{
+            background-color: rgb(188, 230, 169);
+        }
+        .bg_green{
+            background-color: rgb(184, 226, 100);
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>

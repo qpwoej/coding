@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        /*
+        var num = 1;
+        var table = "<table>"
+        for (i = 0; i < 1; i++)
+            table += "<tr>";
+        for (j = 0; j < 5; j++, num++)
+            table += "<td class='bg_yellow'>"+num+"</td>"
+
+        for (i = 0; i < 1; i++)
+            table += "<tr>";
+        for (j = 0; j < 5; j++,num++)
+            table += "<td class='bg_green'>"+num+"</td>"
+
+        for (i = 0; i < 1; i++)
+            table += "<tr>";
+        for (j = 0; j < 5; j++,num++)
+            table += "<td class='bg_yellow'>"+num+"</td>"
+
+        for (i = 0; i < 1; i++)
+            table += "<tr>";
+        for (j = 0; j < 5; j++,num++)
+            table += "<td class='bg_green'>"+num+"</td>"
+
+        for (i = 0; i < 1; i++)
+            table += "<tr>";
+        for (j = 0; j < 5; j++,num++)
+            table += "<td class='bg_yellow'></td>"
+
+*/
+
+
+        var num = 1;
+        var table = "<table>";
+        for (i = 0; i < 5; i++){
+            if(i%2==0) //짝수
+            table += "<tr class='even'>";
+               
+                else
+                table +="<tr class='odd'>";
+               
+        for (j = 0; j < 5; j++){
+            table += "<td>" + num + "</td>";
+            num++;
+          
+        
+        }
+        table += "</tr>";
+    }
+
+        table += "</table>";
+        document.write(table);
+    </script>
+
+    <style>
+        tr{background-color: whitesmoke;}
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            text-align: center;
+            vertical-align: middle;
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            padding: 15px;
+            font-size: 80px;
+        }
+
+        .even{
+            background-color: rgb(202, 222, 240);
+        }
+
+        .odd{
+            background-color: rgb(167, 200, 230);
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>

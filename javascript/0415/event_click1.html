@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            var btn = document.getElementsByTagName("button")[0];
+            btn.onclick = function () {
+                //태그 선택
+                var id = document.getElementById("id");
+                var id = document.getElementById("pass");
+
+                //아이디와 패스워드 값이 전부 입력되었는지 체크
+                //전부 입력이 되었으면 값이 정상입니다
+                if(id.value.trim().lenght == 0 ||pass.value.trim().lenght == 0){
+                    alert("id와 pass를 입력하세요");
+                }else{
+                    alert("정상적으로 입력되었습니다");
+                }
+                //전부 입력x면 아이디 비밀번호를 입력하세요
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <label for="id"><input type="id" id="id" name="id"></label> <br>
+        <label for="pass"><input type="password" id="pass" name="pass"></label> <br>
+        <button>로그인</button>
+    </form>
+</body>
+
+</html>

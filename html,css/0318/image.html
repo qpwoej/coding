@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>이미지</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+    <!--기본적으로 단일+인라인 태그.(줄바꿈 x) 이미지가 클 경우 줄바꿈됨
+        이미지 파일경로 (상대경로, 절대경로, 웹 주소)
+        alt-엑박일 경우 뜨는 글자 내용-->
+
+
+    <!--상대경로:현재 폴더를 기준으로 해당이미지까지의 경로-->
+
+    <img src="img/dog.jpg" alt="" width="300" height="">
+    <img src="img/sub/bird.jpg" alt="">
+    <img src="yachts.jpg" alt="">
+    <img src="../snow.jpg" alt="">
+    <!--상위폴더의 사진-->
+
+    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="">
+    <!--이미지가 위치한 url
+        이미지 주소복사-->
+    <img src="/dog.jpg" alt="">
+    <!--url 루트폴더 기준-->
+
+
+    <!--절대경로:잘 안씀 -->
+    <img src="file:///C:/workspace/0318/yachts.jpg" alt="절대 경로로 잡은이미지">
+
+</body>
+</html>

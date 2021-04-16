@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dd</title>
+    <style>
+/*inline,block으로 태그를 구분하는데,
+  태그를 inline,block등 다른형태로 변경할때 사용하는 css가
+  display inline,block,inline-block, none*/
+ *{
+     padding: 0;
+     margin: 0;
+ }
+  .img{
+      display: none;
+  }
+  li{
+      
+    /*inline block 엔터를 줄바꿈,띄어쓰기 등으로 인식한다*/
+      border: 1px solid black;
+      display: inline-block;
+      width: 100px;
+      height: 50px;
+      text-align: center;
+      
+
+  }
+
+  ul{
+      font-size: 0px;
+      
+  }
+
+  .menu_a{
+      width: 100%;
+      font-size: 16px;
+      /*padding:17px 0px
+      display:inline block;
+      =line-heiht: 48px;*/
+      padding: 14px 5px;
+      box-sizing: border-box;
+      /*가로길이에 padding을 포함시켜 박스밖으로 빠져나가지않게한다*/
+      display: inline-block;
+      color: black;
+      text-decoration:none;
+     
+  }
+
+  /*
+  ul{
+      list-style-type: none;
+      
+  }*/
+    </style>
+</head>
+
+<body>
+    <!--
+        inline(span,a,img,b,u,i) 글자단위, 같은 줄에 출력
+        레이아웃 용도로 부적합(내용적인 부분 담당)
+        가로세로 길이 설정x, 여백 설정도 일부가능(완전히x)
+        영역크기만 채우기
+
+
+        block(h1~h5,p,div,hr) 문단(block)단위,출력후 줄바꿈
+        레이아웃 용도로 쓰임 주로 각 웹 영역에 해당
+        가로세로 길이 설정,여백 설정이 가능
+        태그전체에 채우기
+    -->
+    <ul>
+        <li ><a href="#" class="menu_a">항목1</a></li>
+        <li><a href="#" class="menu_a">항목2</a></li>
+        <li><a href="#" class="menu_a">항목3</a></li>
+        <li><a href="#" class="menu_a">항목4</a></li>
+        <li><a href="#" class="menu_a">항목5</a></li>
+    </ul>
+    <hr>
+
+    <a href="#">버튼</a>
+    <a href="#">버튼</a>
+    <a href="#">버튼</a>
+    <a href="#">버튼</a>
+    <a href="#">버튼</a>
+    <hr>
+    <h2>display: nonem cisiblity : hidden 차이(visible 기본)</h2>
+    <img src="/snow.jpg"  class="img">
+    <img src="/snow.jpg" >
+</body>
+
+</html>

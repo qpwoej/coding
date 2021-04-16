@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숫자가 Nan 이냐</title>
+    <script>
+        //isNaN 함수는 숫자가 아니어야 true
+        document.write(isNaN(1234), "<br>");
+        document.write(isNaN("12345"), "<br>");
+        document.write(isNaN("sdfsf"), "<br>");
+        document.write(isNaN(true), "<br>"); //변수가 저장되면 0과1이 나옴
+   
+    document.write(isNaN(NaN),"<br>");
+    document.write(isNaN(undefined),"<br>");
+    document.write(isNaN(null),"<br>");
+
+
+    document.write(Number(true),"<br>");
+    document.write(Number(false),"<br>");
+    document.write(Number(null),"<br>");
+    document.write(Number("1234"),"<br>");
+   </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

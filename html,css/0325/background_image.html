@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 1000px;
+            height: 700px;
+            border: 20px dashed black;
+            padding: 50px;
+            background-image: url("/0325/img/cat.jpg");
+            /*repeat 기본값
+              no repeat 반복안함
+              repeat-X 가로축으로 반복
+              repeat-Y 세로축으로 반복*/
+            background-repeat: no-repeat;
+            background-clip:border-box;
+            /*배경이미지 가로 세로 픽셀 %로 줄수있음
+            cover 이미지를 늘리며 채움 
+            가로 세로 작은비율로 계산해서 전부채움 
+            contain 이미지 100% 대체로 이미지가 짤림
+            이미지가 영역 전체를 채우지는 못함*/
+            background-size:300px;
+
+            /*배경이미지 위치 잡을때 px, %단위로 좌표 설정
+            키워드를 이용해서 top center bottom right left*/
+            background-position:top left;
+            /*border-box
+              padding-box
+              content-box*/
+            background-origin: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

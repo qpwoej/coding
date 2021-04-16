@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        숫자 하나 입력 받은 후
+        1부터 해당 숫자까지 합을 출력
+
+        예시> 
+        100부터 입력
+        1~100까지의 합 : 5050
+        */
+
+
+        /*
+       var ea, i;
+       i=Number(prompt("숫자입력"));
+       for(ea=0; ea < 100;ea--){
+           document.write(ea+i,"<br>");
+       }
+       */
+
+       var num = Number(prompt("숫자입력"));
+       var total =0;
+       for(i=1;i<=num;i++){
+        total += i;
+       }
+       document.write(1,"~",num,"까지의 합 : ",total);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

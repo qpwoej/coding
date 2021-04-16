@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 내용 추가 삭제 검색</title>
+    <script>
+        //add delete search
+
+        //배열 생성
+        var arr = new Array();
+        var arr = [];
+
+
+        arr.push(1); //index 0
+        arr.push(4); //index 1
+        arr.push(5); //index 2
+        arr.push(2); //index 3
+        arr.push(3); //index 4
+        arr.push(1); //index 5
+
+
+        PrintArray(arr);
+        document.write("<h2>배열 요소 검색</h2>");
+        //indexOf 해당값이 위치한 인덱스 번호값
+        document.write("값 5에해당하는 인덱스번호 :",arr.indexOf(5),"<br>");
+        document.write("값 3에해당하는 인덱스번호 :",arr.indexOf(3));
+        //배열 요소 삭제
+        document.write("<h2>배열 요소 삭제</h2>");
+        arr.splice(arr.splice(arr.indexOf(5),3),"추출한 배열 <br>"); //indexOf 5부터 3글자 삭제
+        PrintArray(arr);
+        //배열내용 전체출력
+        function PrintArray(arr) { //var arr 과 다른 변수
+            for (i = 0; i < arr.length; i++) {
+                document.write(arr[i], "");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

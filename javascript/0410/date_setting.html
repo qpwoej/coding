@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var today = new Date("2021-04-12");
+        today.setDate(31); //날짜데이터 중 일을 바꾸는 부분
+        document.write(today,"<br>");
+        today.setDate(0); //달의 마지막 날짜
+        document.write(today,"<br>");
+        today.setDate(-1); //날짜데이터 중 일을 바꾸는 부분
+        document.write(today,"<br>");
+
+        /*
+        today.setDate(42); 
+        document.write(today,"<br>");*/
+
+        today.setDate(today.getDate()-1); 
+        document.write(today,"<br>");
+
+
+        today.setTime(today.getDate()-(1000*60*60*24)); 
+        document.write(today,"<br>");
+
+
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,2 @@
+css 설정시 class 보다 id가 우선순위다.
+id < class < tag

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .imgbox {
+            text-align: center;
+            padding: 10px;
+        }
+
+
+        .bigbox {
+            width: 450px;
+            height: 650px;
+            border: 2px solid gainsboro;
+            padding: 60px;
+            margin: 0 auto;
+        }
+
+
+        h2 {
+            font-size: 23px;
+        }
+
+        p,
+        ul,
+        input,
+        button,
+        select {
+            margin: 6px;
+        }
+
+        ul {
+            font-size: 14px;
+            color: gray;
+            padding: 8px 20px;
+        }
+
+        ul li {
+            padding-bottom: 6px;
+        }
+
+        p {
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        input {
+            font-size: 17px;
+            font-weight: bold;
+            width: 300px;
+            height: 46px;
+            border-bottom: 1px gainsboro;
+            border-style: none;
+            border-bottom: 2px solid gainsboro;
+        }
+
+
+
+
+        .number {
+            width: 150px;
+            height: 40px;
+            border-radius: 50px;
+            border: 1px solid gainsboro;
+            background-color: white;
+            margin: 15px 0px;
+        }
+
+        .next {
+            margin: 0 auto;
+            width: 450px;
+            height: 50px;
+            border-radius: 5px;
+            border: none;
+            margin: 8px 0px;
+
+        }
+
+        select {
+            width: 70px;
+            height: 40px;
+            border: none;
+            border-bottom: 2px solid gainsboro;
+            border-right: 2px solid gainsboro;
+
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        span {
+            color: gray;
+
+        }
+
+        span {
+            display: inline-block;
+            line-height: 48px;
+        }
+
+        .id{
+            margin: 0px;
+        }
+
+       
+    </style>
+</head>
+
+<body>
+
+
+    <p class="imgbox"> <img src="/0401/icon/profile.png"> </p>
+    <div class="bigbox">
+
+        <h2>카카오계정 정보를 입력해주세요</h2>
+        <p>카카오계정 이메일</p>
+        <section>
+           
+            <article>
+                <form class="fom1">
+                    <div class="main">
+                        <input class="id" type="text" placeholder="아이디 입력">
+                            <span>@kakao.com</span>
+                    </div>
+                </form>
+                <ul>
+                    <li>입력한 카카오메일로 카카오 계정에 로그인할 수 있습니다</li>
+                    <li>한번 만든 카카오메일은 변경할 수 없으니, 오타가 없도록</li>
+                    <li>생성한 카카오메일로 카카오계정 알림</li>
+                </ul>
+                <p>비밀번호</p>
+                <form>
+                    <input type="password" placeholder="비밀번호(8~32자리)">
+                    <input type="password" placeholder="비밀번호 재입력">
+                </form>
+
+                <p>닉네임</p>
+                <form>
+                    <input type="text" placeholder="닉네임을 입력하세요">
+                    <span>0/20</span>
+                </form>
+
+                <p>전화번호</p>
+                <form>
+                    <select>
+                        <option>+82</option>
+                        <option>+81</option>
+                        <option>+80</option>
+                        <option>+79</option>
+                    </select>
+                    <input  type="text" placeholder="전화번호">
+                </form>
+
+
+            
+
+
+                <button class="number"><a href="#">인증번호 전송</a></button>
+
+                <button class="next"> <a href="#">다음</a></button>
+            </article>
+        </section>
+    </div>
+
+</body>
+
+</html>
+
+폼,세로레이아웃

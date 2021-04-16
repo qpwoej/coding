@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>일기예보</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        img {
+            width: 32px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--table 홈페이지 게시판에 주로 사용
+    레이아웃을 잡는 용도-->
+    <h2>일기예보</h2>
+
+    <br>
+
+    <table>
+        <caption>지역날씨 예보</caption>
+        <tr>
+            <th rowspan="2">지역</th>
+            <th colspan="2">27일(목)</th>
+            <th colspan="2">28일(금)</th>
+            <th colspan="2">29일(토)</th>
+        </tr>
+
+        <tr>
+            <td>오전</td>
+            <td>오후</td>
+            <td>오전</td>
+            <td>오후</td>
+            <td>오전</td>
+            <td>오후</td>
+        </tr>
+
+        <tr>
+            <td>서울<br>경기도</td>
+            <td><img src="/whether.png"></td>
+            <td><img src="/whether.png"></td>
+            <td><img src="/whether.png"></td>
+            <td><img src="/rain.png"></td>
+            <td><img src="/rain.png"></td>
+            <td><img src="/rain.png"></td>
+        </tr>
+
+        <tr>
+            <td>제주도</td>
+            <td><img src="/whether.png"></td>
+            <td><img src="/whether.png"></td>
+            <td><img src="/whether.png"></td>
+            <td><img src="/rain.png"></td>
+            <td><img src="/rain.png"></td>
+            <td><img src="/rain.png"></td>
+        </tr>
+    </table>
+    <!--loyartee free 구글 무료아이콘 사이트 검색
+        -icon finder-->
+</body>
+
+</html>

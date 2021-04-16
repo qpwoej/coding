@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>폼태그</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+    <form action="" method="get">
+        가입약관 동의 여부 <br>
+        <input type="radio" name="form" value="yes">예 <br>
+        <input type="radio" name="form" value="no">아니오<br>
+        날짜 <input type="date" name="form" value="date">
+        <br>
+        수량 <input type="number" name="form" id="" min="0" max="100" step="3"> <br>
+        첨부파일 <input type="file" name="" id=""><br>
+        슬라이더 <input type="range" name="" id="" value="1"><br>
+        color picker <input type="color" name="color" id=""><br>
+        <!--min,max 최소,최대값
+            step 증감값 한번클릭 시 올라가는 값(잘안씀)
+            file 파일 전송
+            range 슬라이더 1부터100까지 값 설정 가능 
+            name 속성으로 하나의 그룹으로 인식되어 서버로 보낼 수 있다
+            select에서 전송되는 값은 option의 value 속성
+            selected 기본선택 지정(페이지 접속시 처음 보이는 선택)
+        -->
+
+        <select name="sell">
+            <option value="A">선택1</option>
+            <option value="B" selected>선택2</option>
+            <option value="C">선택3</option>
+            <option value="D">선택4</option>
+        </select><br>
+        <!--input 태그의 텍스트 상자에서 쓰던 속성을 전부 사용이 가능함
+            cols 컬럼개수(글자길이), rows 몇줄(라인수)
+            textarea 태그에서는 태그안에 내용을 넣으면 넣은 내용이 그대로 미리 입력되어 있음-->
+        <textarea name="" id="" cols="30" rows="10" placeholder="텍스트 입력"></textarea>
+        <button type="submit">전송</button>
+        <!--<input type="submit">와 같은 태그-->
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js 속성 다루기</title>
+
+</head>
+
+<body>
+    <img src="/snow.jpg" alt="대체 텍스트"><br>
+    <input type="text" id="txt">
+    <button onclick="btnClick()">실행</button> <!--버튼 누르면 이미지가 바뀜-->
+    <script>
+        function btnClick(){
+            var img = document.getElementsByTagName("img")[0];
+            var txt = document.getElementById("txt");         
+            alert(img.src);
+            alert(txt.value);
+
+            //다른 이미지로 교체
+            img.src = "/dog.jpg";
+            //input태그 안에 test 글자 출력
+            txt.value="TEST";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prompt</title>
+    <script>
+        //prompt(message?:string, _default?:string): string
+        //팝업창에 나타낼 메세지, 미리입력할 값
+        var input = prompt("숫자입력", "0")
+        input = Number(input); //input안의 값을 모두 number로 바꿈
+        document.write(typeof input, "<br>");
+        document.write(input ," ",input +100 , "<br>"); //" "글자 띄우는 용도
+     /*document.write(typeof input, "<br>");
+        모두 string으로 뜬다
+        취소= object*/
+        /*팝업창에 적은 값이 창에 나타난다 태그를 쓰면 그대로나온다
+        undifind 변수 못찾음
+        null 데이터가 없음
+        "" 빈 문자열
+        */
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

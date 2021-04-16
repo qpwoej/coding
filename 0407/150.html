@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        header {
+            display: inline-block;
+            width: 100%;
+            height: 120px;
+            background-color: gainsboro;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        header>img {
+            margin-left: 30px;
+            width: 180px;
+            height: 80px;
+        }
+
+        header>table {
+            float: right;
+            margin-right: 30px;
+        }
+
+        input {
+            width: 300px;
+            height: 40px;
+            border: 1px solid rgb(185, 185, 185);
+            border-radius: 5px;
+        }
+
+        button {
+            color: white;
+            background-color: rgb(63, 150, 221);
+            border: none;
+            border-radius: 5px;
+            width: 50px;
+            height: 85px;
+            font-size: 12px;
+        }
+
+
+        .head_img {
+            width: 100%;
+            height: 300px;
+            background-image: url(/snow.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            box-sizing: border-box;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        nav ul {
+            text-align: center;
+        }
+
+        nav li {
+            padding: 20px;
+            line-height: 30px;
+            display: inline-block;
+
+        }
+
+        a:link,
+        a:visited {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav {
+            width: 100%;
+            height: 70px;
+            background-color: gainsboro;
+            box-sizing: border-box;
+        }
+
+        section {
+            width: 100%;
+            height: 450px;
+            box-sizing: border-box;
+        }
+
+        content {
+            display: inline-block;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+
+        caption {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        content>table {
+            margin-right: 50px;
+        }
+
+
+        .art_ta {
+            width: 100px;
+            border-top: 1px solid rgb(202, 202, 202);
+            border-bottom: 1px solid rgb(202, 202, 202);
+            padding: 8px;
+        }
+
+        .art_tab th {
+            background-color: gainsboro;
+            border-top: 2px solid rgb(202, 202, 202);
+            border-bottom: 2px solid rgb(202, 202, 202);
+            padding: 10px;
+            font-size: 15px;
+        }
+
+        .art_tab {
+            padding: 8px;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            box-sizing: border-box;
+            padding-left: 25%;
+            margin-top: 20px;
+        }
+
+        footer {
+            width: 100%;
+            height: 120px;
+            padding: 30px;
+            padding-left: 60px;
+            background-color: gainsboro;
+            box-sizing: border-box;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="/snow.jpg" alt="헤더이미지" title="헤더이미지">
+        <table>
+
+            <tr>
+                <form action="" method="POST">
+                    <td><label for="id"><input type="id" name="id" id="id" placeholder="아이디 입력"></label></td>
+                    <td rowspan="2"><a href="#"><button>로그인</button></a></td>
+                </form>
+            </tr>
+            <tr>
+                <td><label for="pass"><input type="password" name="pass" id="pass" placeholder="암호입력"></label></td>
+            </tr>
+        </table>
+    </header>
+    <div class="head_img">
+
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#" title="home">HOME</a></li>
+            <li><a href="#" title="예약">예약</a></li>
+            <li><a href="#" title="펜션스토리">펜션스토리</a></li>
+            <li><a href="#" title="펜션소개">펜션소개</a></li>
+        </ul>
+    </nav>
+
+    <section>
+
+        <div class="container">
+            <content>
+                <table class="art_tab">
+                    <caption>공지사항</caption>
+                    <tr>
+                        <th>글번호</th>
+                        <th>제목</th>
+                        <th>작성일</th>
+                        <th>조회수</th>
+                    </tr>
+
+                    <tr class="art_ta">
+                        <td class="art_ta">1</td>
+                        <td class="art_ta">제목</td>
+                        <td class="art_ta">작성일</td>
+                        <td class="art_ta">조회수</td>
+                    </tr>
+
+                    <tr class="art_ta">
+                        <td class="art_ta">2</td>
+                        <td class="art_ta">제목</td>
+                        <td class="art_ta">작성일</td>
+                        <td class="art_ta">조회수</td>
+                    </tr>
+
+                    <tr class="art_ta">
+                        <td class="art_ta">3</td>
+                        <td class="art_ta">제목</td>
+                        <td class="art_ta">작성일</td>
+                        <td class="art_ta">조회수</td>
+                    </tr>
+
+                    <tr class="art_ta">
+                        <td class="art_ta">4</td>
+                        <td class="art_ta">제목</td>
+                        <td class="art_ta">작성일</td>
+                        <td class="art_ta">조회수</td>
+                    </tr>
+
+                    <tr class="art_ta">
+                        <td class="art_ta">5</td>
+                        <td class="art_ta">제목</td>
+                        <td class="art_ta">작성일</td>
+                        <td class="art_ta">조회수</td>
+                    </tr>
+                </table>
+            </content>
+
+            <content>
+                <table class="art_tab">
+                    <caption>이벤트</caption>
+                    <tr class="art_ta">
+                        <th>글번호</th>
+                        <th>제목</th>
+                        <th>작성일</th>
+                        <th>조회수</th>
+                    </tr>
+
+                    <tr class="art_ta">
+                        <td class="art_ta">1</td>
+                        <td class="art_ta">제목</td>
+                        <td class="art_ta">작성일</td>
+                        <td class="art_ta">조회수</td>
+                    </tr>
+
+                    <tr class="art_ta">
+                        <td class="art_ta">2</td>
+                        <td class="art_ta">제목</td>
+                        <td class="art_ta">작성일</td>
+                        <td class="art_ta">조회수</td>
+                    </tr>
+
+                    <tr class="art_ta">
+                        <td class="art_ta">3</td>
+                        <td class="art_ta">제목</td>
+                        <td class="art_ta">작성일</td>
+                        <td class="art_ta">조회수</td>
+                    </tr>
+
+                    <tr class="art_ta">
+                        <td class="art_ta">4</td>
+                        <td class="art_ta">제목</td>
+                        <td class="art_ta">작성일</td>
+                        <td class="art_ta">조회수</td>
+                    </tr>
+
+                    <tr class="art_ta">
+                        <td class="art_ta">5</td>
+                        <td class="art_ta">제목</td>
+                        <td class="art_ta">작성일</td>
+                        <td class="art_ta">조회수</td>
+                    </tr>
+                </table>
+        </div>
+        </content>
+    </section>
+    <footer>
+        <ul>
+            <li>사업자 정보:OOOOO</li>
+            <li>연락처:OOOOO</li>
+            <li>이메일:OOOOO@gmail.com</li>
+        </ul>
+    </footer>
+</body>
+
+</html>

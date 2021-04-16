@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #back{
+            background-image: url(/snow.jpg);
+            width: 100px;
+            height: 100px;
+            background-size: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id ="pop" style =""> 영역 태그</div>
+    <ul>
+        <li>A - list</li>
+        <li>B - list</li>
+        <li>C - list</li>
+        <li>D - list</li>
+    </ul>
+<div id="back" onmouseover="rolloverImage()"></div> <!--onmouseover 마우스 올라갔을때-->
+    <!--js랑 html연결을 위해 body안에 script를 씀-->
+    <script>
+        var pop = document.getElementById("pop"); //id가 pop인 태그선택
+        // alert(pop.innerHTML); //팝업(prompt와 동일)
+        // 선택태그에 css적용법
+        // 태그안에 style넣기(일시적)
+        pop.style.color = "white";
+        //css속성이 background-color처럼 -가 들어가면 
+        //-를 빼고 단어를 붙이고 끊은 단어 첫글자부터 대문자로
+        //ex) backgroundColor,listStyleType  
+        pop.style.backgroundColor = "black";
+        var ul =document.getElementsByTagName("ul")[0] //태그 네임 0번째 ul을 불러옴
+        ul.style.listStyleType ="none";
+        function rolloverImage(){
+            var back= document.getElementById("back");
+            back.style.backgroundImage = "url('/dog.jpg')";
+        }
+    </script>
+</body>
+
+</html>

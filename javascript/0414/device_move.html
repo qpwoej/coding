@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //문자열 함수 if문
+        //사용자 정보를 소문자로 변환하여 출력
+        var info = navigator.userAgent.toLowerCase();
+        //나올수 있는값 : window, macintosh,iphone,android..
+        //해당 값이 있으면 해당 홈페이지로 이동하는 링크
+        //windows --> ms홈페이지
+        //macintosh --> 애플 맥 소개페이지
+        //iphone --> 애플 아이폰 소개페이지
+        //android --> 구글 홈페이지
+        if (info.indexOf("window") != -1) {
+            document.write("<a href='https://www.microsoft.com/ko-kr'> </a>")
+        } else if (info.indexOf("macintosh") != -1) {
+            document.write("<a href='https://www.apple.com/kr/mac/?afid=p238%7CsQhouKQHU-dc_mtid_18707vxu38484_pcrid_490125115571_pgrid_16348500321_&cid=aos-kr-kwgo-mac--slid---product--'> </a>")
+
+        } else if (info.indexOf("iphone") != -1) {
+            document.write("<a href='https://www.apple.com/kr/iphone/?afid=p238%7CsO7OKLNtc-dc_mtid_209254jz40384_pcrid_472673347605_pgrid_44798419125_&cid=wwa-kr-kwgo-iphone--iPhone-General-'> </a>")
+
+        }else if (info.indexOf("android") != -1) {
+            document.write("<a href='https://www.google.com/webhp?hl=ko&sa=X&ved=0ahUKEwiq_OaV2vzvAhXjKKYKHZMWCLwQPAgI'> </a>")
+
+        }
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

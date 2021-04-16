@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+
+
+
+   
+</head>
+
+<body>
+    <!--event
+        사용자가 웹페이지에서 하는 모든 행동
+        마우스클릭,자판 누름, 페이지 로드, submit버튼 클릭 시-->
+
+    <input type="text" name="t1" value="A"><br>
+    <input type="text" name="t2"  value="B"><br>
+    <input type="text" name="t3"  value="C"><br>
+    <input type="text" name="t4"  value="D"><br>
+    <p><b>1</b></p>
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+    <p>5</p>
+    <h1>h1-1</h1>
+    <script>
+        //태그명 기준으로 접근
+        var p = document.getElementsByTagName("p");
+        console.log("선택된 p 태그");
+        console.log("선택된 p태그 개수 :" + p.length);
+        //innerHTML: 선택요소안의 html태그 내용을 가지고 있는 변수
+        for (i = 0; i < p.length; i++) {
+            console.log(p[i].innerHTML);
+        p[i].style.backgroundColor ="green";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+        }
+        var h1  =document.getElementsByTagName("h1");
+        console.log("선택된 h1태그 개수 :" +h1.length);
+        for (i = 0; i < h1.length; i++) 
+            console.log(h1[i].innerHTML);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+        //input태그 선택 반복문까지 처리
+        var  input  =document.getElementsByTagName("input");
+        console.log("선택된 input태그 개수 :" +input.length);
+        for (i = 0; i < input.length; i++) {
+        //input tag에 입력된 값을(value 속성값) 읽어옴
+            console.log(input[i].value + " : " + input[i].name);
+            input[i].value += i;
+        }  
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>비디오</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+    <!--
+       controls 동영상 컨트롤러 
+       loop 반복재생
+       autoplay
+       poster 썸네일
+    -->
+    <video src="./Mountains.mp4" poster="../yachts.jpg" controls></video>
+
+    <video width="600">
+        <source src="./Mountains.mp4" type="video/mp4">
+        <source src="./Mountains.ogv" type="video/ogv">
+
+    </video>
+    <hr>
+
+    <!--iframe 다른서버,홈페이지의 링크를 불러오는 태그 -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/6MyHdz_MW3Y" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    <iframe src='https://tv.naver.com/embed/18960528?autoPlay=true' frameborder='no' scrolling='no' marginwidth='0'
+        marginheight='0' WIDTH='544' HEIGHT='306' allow='autoplay' allowfullscreen></iframe>
+
+</body>
+
+</html>

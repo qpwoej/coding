@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 40px 0px;
+        }
+
+        .container {
+            width: 550px;
+            height: 600px;
+            border: 1px solid gainsboro;
+            padding: 80px;
+            margin: 0 auto;
+        }
+
+
+        h2 {
+            font-size: 18px;
+        }
+
+
+        .grey {
+            font-size: 12px;
+            list-style-type: disc;
+            padding-left: 40px;
+            font-weight: bold;
+
+        }
+
+
+        ul {
+            list-style-type: none;
+        }
+
+        ul li {
+            margin: 10px 0px;
+        }
+
+
+        input,
+        span,
+        .grey {
+            color: gray;
+        }
+
+
+        label {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 80%;
+            height: 30px;
+            border: none;
+            outline: none;
+        }
+
+
+
+
+        span {
+            font-weight: bold;
+            font-size: 17px;
+            padding-right: 5px;
+        }
+
+
+        select {
+
+            height: 50px;
+            width: 80px;
+            font-size: 15px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: none;
+            border-right: 2px solid #bababa;
+
+
+        }
+
+
+
+        ::placeholder {
+            color: gray;
+            font-size: 17px;
+        }
+
+        .id {
+            font-weight: bold;
+        }
+
+        .underline {
+            border-bottom: 2px solid #bababa;
+        }
+
+
+        .border_left {
+            margin-left: 10px;
+        }
+
+
+        /*span태그는
+          display: inline-block; 를 설정해야
+          width를 줄수있다*/
+        .two {
+            display: inline-block;
+            text-align: right;
+            width: 20%;
+            box-sizing: border-box;
+        }
+
+
+        .subbutton {
+            width: 180px;
+            height: 40px;
+            border-radius: 30px;
+            border: 1px solid gainsboro;
+            background-color: white;
+        }
+
+        .subbutton:hover {
+            background-color: rgb(240, 240, 240);
+            border-color: gray;
+        }
+
+
+        button {
+            outline: none;
+        }
+
+
+        
+        .daum {
+            width: 500px;
+            height: 50px;
+            border: none;
+            border-radius: 10px;
+
+        }
+
+        .daum:hover {
+            background-color: #ffff04;
+        }
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+
+
+    <h1>KaKao</h1>
+    <div class="container">
+
+        <h2>카카오계정 정보를 입력해주세요</h2>
+        <form action="" method="POST">
+            <ul>
+                <li><label for="id">카카오 계정 이메일</label></li>
+                <li class="underline"><input class="id" type="text" name="id" id="id" placeholder="아이디 입력"><span
+                        class="subtext">@kakao.com</span></li>
+                <li>
+                    <ul class="grey">
+                        <li>입력한 카카오메일로 카카오 계정에 로그인할 수 있습니다</li>
+                        <li>한번 만든 카카오메일은 변경할 수 없으니, 오타가 없도록</li>
+                        <li>생성한 카카오메일로 카카오계정 알림</li>
+                    </ul>
+                </li>
+                <li><label for="pass">비밀번호</label></li>
+                <li class="underline"><input type="password" name="password" id="pass" placeholder="비밀번호 (8~23자리)"
+                        maxlength="32"></li>
+                <li class="underline"><input type="password" name="password_check" id="pass_check"
+                        placeholder="비밀번호 재입력" maxlength="32"><span class="two">0/20</span>
+                </li>
+                <li><label for="nick">닉네임</label></li>
+                <li class="underline"><input type="text" name="nick" id="nick" placeholder="닉네임 입력" </li>
+                <li><label for="tel">전화번호</label></li>
+                <li class="underline"><select name="gcode" id="gcode">
+                        <option value="+82">+82</option>
+                        <option value="1">1</option>
+                        <option value="84">84</option>
+                        <option value="55">55</option>
+                    </select><input class="border_left" type="text" id="tel" name="tel" placeholder="전화번호 입력 -는빼고 입력">
+                </li>
+                <li><button class="subbutton" type="button">인증번호 전송</button></li>
+                <li><button class="daum">다음</button></li>
+
+
+            </ul>
+        </form>
+
+
+
+    </div>
+</body>
+
+</html>

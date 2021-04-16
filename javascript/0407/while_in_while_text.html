@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        /*
+                var ea = 1, i = 1;
+                var table = "<table>";
+                while (i < 26) {
+                    ea = 1;
+                    while (i < 26) {
+                        table += "<tr>";
+                        table += "<td>" + ea + "</td><td>*</td><td>" + i + "</td><td>=</td><td>"  * i + "</td>";
+                        table += "<tr>";
+                        i++;
+                    }
+                    table += "<table>";
+                    document.write(,"<br>");
+                    i++;}*/
+
+        var row = 0, col = 0, num = 1;
+        var table = "<table>";
+        while (row < 5) {//행
+            table +="<tr>";
+                col =0;
+            while (col < 5) {//열
+                table += "<td>"+num+"</td>";
+                col++;
+                num++;
+            }
+            row++;
+            table += "</tr>";
+        }
+        table += "<table>";
+            document.write(table);
+
+    </script>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 20px;
+            font-size: 32px;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>

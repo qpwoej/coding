@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+
+        li {
+            width: 300px;
+            line-height: 0px;
+            font-size: 0px;
+        }
+
+        li>label {
+            width: 0px;
+            font-size: 0px;
+            line-height: 0px;
+        }
+
+
+        input,
+        button {
+            width: 100%;
+            height: 40px;
+            box-sizing: border-box;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+
+        input {
+            padding-left: 40px;
+            border-radius: 5px;
+        }
+
+
+        button {
+            border: 2px solid rgb(93, 161, 150);
+            background-color: rgb(127, 203, 206);
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        button:hover {
+           border: 3px inset rgb(93, 161, 150);
+
+        }
+
+
+        input::placeholder {
+            font-size: 18px;
+        }
+
+
+        .icon {
+            background-size: 32px;
+            background-position: 4px center;
+        }
+
+        /*
+        .id {
+            background-image: url(/0331/iconfinder_User_4737448.png);
+            background-repeat: no-repeat;
+            background-size: 15px;
+            background-position: 2px center;
+
+        }
+
+        .pass {
+            background-image: url(/0331/iconfinder_icons_password_1564520.png);
+            background-repeat: no-repeat;
+            background-size: 15px;
+            background-position: 2px center;
+
+        }*/
+        .icon.icon_profile {
+            background-image: url(/0331/iconfinder_User_4737448.png);
+            background-repeat: no-repeat;
+            background-size: 20px;
+            background-position: 2px center;
+        }
+
+        .icon.icon_password {
+            background-image: url(/0331/iconfinder_icons_password_1564520.png);
+            background-repeat: no-repeat;
+            background-size: 20px;
+            background-position: 2px center;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" method="post">
+        <ul>
+
+            <li>
+                <label id="id">아이디</label>
+            </li>
+            <li>
+                <input class="icon icon_profile" type="id" placeholder="아이디 입력">
+            </li>
+
+            <li>
+                <label id="passwd">암호</label>
+            </li>
+            <li> <input class="icon icon_password" type="password" placeholder="암호 입력">
+            </li>
+
+
+            <li><button>로그인</button></li>
+            <li><button type="button">회원가입</button></li>
+        </ul>
+    </form>
+</body>
+
+</html>

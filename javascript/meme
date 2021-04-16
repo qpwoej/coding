@@ -1,0 +1,35 @@
+1. 데이터 저장공간(메모리) 컨트롤
+
+2. 입력/출력
+
+3. 연산자 (사칙,복합대입,증감,비교,논리)
+
+4. 제어문(분기,반복)
+
+5. 함수
+
+git 
+git bash here
+
+git init init 저장소 초기화
+  
+git branch -m main(작업자명)  메인이란 이름 으로 작업물을 관리함
+
+
+nano 파일명
+컨트롤 x 저장하고 끄기
+
+git add text.txt
+
+git init 작업관리 폴더 지정
+
+//최초한번(사용자설정)-commit전에 수행
+git config--global user.name"이름"
+git config--global user.email"메일주소"
+
+//깃이 적용돤 폴더에서 작업한 파일 관리
+git add "파일명"
+dit add * (모든폴더)
+
+//버전 만듬
+git commit-m"커밋 메세지"

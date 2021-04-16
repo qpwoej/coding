@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논리연산자</title>
+    <script>
+        //논리연산자 : AND OR NOT
+        // && (AND): 양쪽에 비교연산자 결과가 둘 다 true일때만 true
+        // ||(backspace옆쪽) (OR): 양쪽에 비교연산자 결과가 둘중하나가 true면 true
+        // ! (NOT): true면 flase, flase면 true로 바꿈
+        var n1 = 10;
+        var n2 = 20;
+        var result;
+        result = n1 >= 10 && n2 <= 20;
+        document.write(result, "<br>");
+        result = n1 < 10 && n2 >= 20;
+        document.write(result, "<br>");
+        result = n1 >= 10 || n2 <= 20;
+        document.write(result, "<br>");
+        result = n1 < 10 || n2 >= 20;
+        document.write(result, "<hr>");
+
+
+
+        document.write(!result, "<br>");
+        document.write(!1, "<br>");
+        document.write(!100, "<br>"); //0이아닌 숫자는 논리값으로 비교했을때 모두 true
+        document.write(!-100, "<br>");
+        document.write(!0, "<br>");
+        //
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

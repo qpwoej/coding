@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 60px;
+            padding: 10px;
+            background-color: grey;
+            border: 1px solid black;
+            display: inline-block;
+        }
+
+        /*div 안의 id가 t1인것만 선택*/
+        div#t1 {
+            -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+        }
+
+        div#t2 {
+            background-image: url(/0401/icon/sponer.jpg);
+            background-size: 100% 100%;
+            transform: translate(40deg);
+            -webkit-transform: rotateX(40deg);
+        }
+
+        div#t3 {
+            background-image: url(/0401/icon/sponer.jpg);
+            background-size: 100% 100%;
+            transform: translate(40deg);
+            -webkit-transform: rotateY(40deg);
+        }
+
+        div#t4 {
+            background-image: url(/0401/icon/sponer.jpg);
+            background-size: 100% 100%;
+            transform: translate(40deg);
+            -webkit-transform: rotateZ(40deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--
+        y축 가로
+        x축 세로
+        z축 확대
+    -->
+    <div id="t1"></div>
+    <div id="t2"></div>
+    <div id="t3"></div>
+    <div id="t4"></div>
+</body>
+
+</html>

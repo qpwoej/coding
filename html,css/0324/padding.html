@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        div {
+            width: 200px;
+            height: 200px;
+            border:1px solid black;
+        }
+        /*상하좌우 동일하게 넣는 경우*/
+        .box1{
+           padding: 30px;
+        }
+        /*상하 좌우 묶어서 넣는 경우
+          첫째값이 상하, 둘째 값이 좌우*/
+        .box2{
+            padding: 20px 40px;
+        }
+
+        /* 상 좌우 하
+        첫째값이 상단, 둘째 값이 좌우 셋째값이 하단*/
+        .box3{
+            padding: 10px 20px 30px;
+        }
+
+        /* 상 우 하 좌 (시계방향)*/
+        .box4{
+            padding: 10px 20px 30px 40px;
+        }
+
+        p{
+            border: 1px solid black;
+            padding-top: 10px;
+            padding-bottom: 20px;
+            padding-left: 5px;
+            padding-right: 7px;
+        }
+           
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <hr>
+    <div class="box2"></div>
+    <hr>
+    <div class="box3"></div>
+    <hr>
+    <div class="box4"></div>
+    <hr>
+    
+
+    <hr>
+    <p>block <span>태그</span> 영역</p>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>재시험 복습</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+
+        }
+
+        /*header*/
+        header {
+            width: 100%;
+            background-color: gainsboro;
+        }
+
+        header div {
+
+            /*내용만큼 크기가 준다*/
+            display: inline-block;
+            /*기존 크기 100% 패딩영역과 테두리영역 크기까지 포함*/
+            width: 100%;
+            padding: 20px 200px;
+            box-sizing: border-box;
+        }
+
+        header>div>img {
+            float: left;
+            width: 200px;
+            height: 70px;
+        }
+
+        header>div>form {
+            float: right;
+            border: 1px solid black;
+        }
+
+        /*형제요소 div 다음의 img태그*/
+        header>div+img {
+            width: 100%;
+            height: 300px;
+            clear: both;
+        }
+
+        nav {
+            width: 100%;
+            background-color: #e8e8e8;
+            text-align: center;
+            margin-bottom: 80px;
+
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: inline-block;
+        }
+
+        nav ul li {
+            width: 200px;
+            height: 70px;
+            float: left;
+        }
+
+        li>a:link,
+        li>a:visited {
+            font-size: 20px;
+            line-height: 20px;
+            padding: 25px 0px;
+            display: inline-block;
+            width: 100%;
+            color: black;
+            text-decoration: none;
+
+
+        }
+
+
+        article {
+            width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td,th{
+            border: 1px solid black;
+            padding: 10px 50px;
+        }
+
+        footer{
+            width: 100%;
+            padding: 30px 100px;
+            background-color: #e8e8e8;
+            box-sizing: border-box;
+            margin-top: 50px;
+        }
+
+
+        footer ul{
+            list-style-type: none;
+        }
+
+        footer li{
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="/snow.jpg" alt="로고">
+
+
+            <form action="">
+                <lebel for="id"> 아이디</lebel>
+                <input type="text" name="id" id="id"> <br>
+                <lebel for="pass"> 암호</lebel>
+                <input type="password" name="pass" id="pass"> <br>
+                <button>로그인</button>
+                <button type="button">회원가입</button>
+            </form>
+        </div>
+        <img src="/snow.jpg" alt="광고이미지">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" title="메인페이지 이동">HOME</a></li>
+            <li><a href="#" title="제품소개 페이지">제품소개</a></li>
+            <li><a href="#" title="게시판 페이지">게시판</a></li>
+            <li><a href="#" title="고객센터">고객센터</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        
+        <article>
+            <h2>게시판</h2>
+            
+            <table>
+                <tr>
+                    <th>no</th>
+                    <th>title</th>
+                    <th>date</th>
+                    <th>count</th>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td>제목</td>
+                    <td>2021-04-06</td>
+                    <td>50</td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>title</td>
+                    <td>date</td>
+                    <td>100</td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>title</td>
+                    <td>date</td>
+                    <td>100</td>
+                </tr>
+            </table>
+        </article>
+    </section>
+
+    <footer>
+        <ul>
+            <li>사업자번호:0000-0000-0000</li>
+            <li>연락처:0000-0000-0000</li>
+            <li>이메일:0000@naver.com</li>
+        </ul>
+    </footer>
+</body>
+
+</html>
