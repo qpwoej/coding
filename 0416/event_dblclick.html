@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 -더블클릭</title>
+    <script>
+
+        function eventClick() {
+           alert("클릭이벤트");
+        }
+        function eventDblClick() {
+            alert("더블클릭이벤트");
+        }
+        window.onload = function () {
+         //h1 태그를 아이디 선택자로 선택 
+         //get id(아이디 값)를 제외한 getElement함수들은 배열로 읽어옴
+         //h1 함수에 아이디값 h1를 불러온다.
+         var h1 = document.getElementById("h1");
+         //eventclick 함수를 onclick 이벤트에 지정(저장)
+         h1.onclick = eventClick; 
+         h1.ondblclick = eventDblClick;
+         //() => 함수(이벤트) 강제실행의 의미
+         h1.ondblclick();
+        }
+    </script>
+</head>
+
+<body>
+    <h1 id="h1">제목 태그</h1>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산</title>
+    <script>
+        window.onload = function () {
+            var n1 = document.getElementById("n1");
+            var n2 = document.getElementById("n2");
+            var op =document.getElementById("op");
+            var result = document.getElementById("result");
+            var btn = document.getElementsByTagName("button")[0];
+
+            btn.onclick = function(){
+                var n = Number(n1.value);
+
+                if(op.value == "+")
+                result.value = Number(n1.value) + Number(n2.value);
+                else if (op.value == "-")
+                result.value = Number(n1.value) - Number(n2.value);
+                else if (op.value == "*")
+                result.value = Number(n1.value) * Number(n2.value);
+                else if (op.value == "/")
+                result.value = Number(n1.value) / Number(n2.value);
+                else if (op.value == "%")
+                result.value = Number(n1.value) % Number(n2.value);
+                result.innerHTML += tag; 
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="n1">
+    <select id="op">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <input type="text" id="n2">
+    <button>=</button>
+    <input type="text" id="result" readonly>
+    <hr>
+    <!--연산을 실행할때마다 아래 div에 계산한 이력을 쭉 출력-->
+    <div id="history"></div>
+</body>
+
+</html>

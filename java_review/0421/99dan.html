@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력/출력/연산</title>
+    <script>
+        window.onload = function () {
+            /*  태그 접근 방법 : (태그명 , 클래스명, name 속성값-[]배열로 관리), 아이디속성값
+              아이디값은 단일 변수로 관리(아이디값은 중복x) 중복시 먼저쓴 변수를 불러옴
+             dan,btn 접근하여 변수 생성
+             id값이 dan 태그를 선택후 그 정보를 dan이라는 이름의 변수에 저장*/
+            var dan = document.getElementById("dan");
+            var btn = document.getElementById("btn");
+            /* 위처럼 변수에 객체가 저장된 경우에는 변수명.변수명을 사용하여 접근 
+             . ->왼쪽 변수 안에 있는 값을 사용하겠다.
+            document.getElementById("btn");
+            ->document안에있는 getElementById라는 함수를 쓰겠다.
+            
+            dan에 저장된 값중 value를 뽑아 변수 n에 숫자로 변경해 저장*/
+            btn.onclick = function(){ //버튼클릭
+
+            var n = Number(dan.value);
+            var tag = "";
+            //숫자 n과, id값이 result 태그안에 변수 n에 해당하는 구구단 출력
+       
+            for(i=1;i<10;i++){
+                //화면에 출력할 형태로 태그를 조립하는 과정
+              tag += "<p>";
+              tag += n + " * " + i + " = " + n * i; 
+              tag += "</p>"
+            }
+            result.innerHTML += tag; //result에  tag 계산 값 출력
+        }
+    } 
+    </script>
+</head>
+
+<body>
+    <!--태그에 입력한 내용을 변수에 따로 저장-->
+    <input type="text" id="dan"><button id="btn">출력</button>
+    <div id="result"></div>
+</body>
+
+</html>

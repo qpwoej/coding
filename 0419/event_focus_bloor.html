@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //focus input창에 입력가능한 상태
+        //blur focus 해제상태
+        window.onload = function () {
+            var input = document.getElementsByTagName("input");
+            var textarea = document.getElementById("area");
+            var button = document.getElementsByTagName("button");
+          
+            for (i = 0; i < input.length; i++) {
+              input[i].onfocus = function(){
+                  this.style.backgroundColor = "skyblue";
+              }
+              input[i].onblur = function(){
+                  this.style.backgroundColor = "grey";
+              }
+
+              
+            }
+            textarea.onfocus = button.onfocus = function(){
+                this.style.backgroundColor = "skyblue";
+            }
+
+            textarea.onfocus = button.onblur = function(){
+                this.style.backgroundColor = "white";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="txt"><br>
+    <input type="text" id="txt2"><br>
+    <input type="password" id="pass1"><br>
+    <textarea id="area" cols="30" rows="10"></textarea>
+    <button>버튼</button>
+</body>
+
+</html>
