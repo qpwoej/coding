@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/lib/jquery-3.6.0.js"></script>
+<script>
+    $(function(){
+        console.log($("#txt").val()); // val 화면에 보여주는 것 
+        console.log($("#txt").attr("value"));
+        $("button").click(function(){
+            console.log("---------------클릭이벤트------------"); 
+            //현재 live로 입력한 값을 기준으로 출력
+            console.log($("#txt").val()); //입력내용 출력
+            //작성된 초기 value 속성을 읽기 때문에 우리가 입력한 값이 나오지 않음
+            console.log($("#txt").attr("value")); // attr(value) 태그에 적용된 (최초에 설정된)value 속성
+        //새로운 값 지정, 클릭시 val안의 문자열로 바뀜
+            $("#txt").val("클릭이벤트 수행");
+        });
+    });
+</script>
+</head>
+<body>
+    <input type="text" id="txt" value="text"><button id="btn">실행</button>
+</body>
+</html>

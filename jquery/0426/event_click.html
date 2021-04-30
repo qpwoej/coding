@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/lib/jquery-3.6.0.js"></script>
+    <script>
+        $(function () {
+            $("p").click(function () {
+                
+           /*   같은문법들(자주쓰임)
+           1.   alert($(this).parent().html());
+           2.   alert($("#container").parent().html());
+           3.   $("p").on("click mouseover",function () {
+                alert($("#container").html());
+            });
+
+           */
+                alert($("#container").html());
+            });
+           
+        });
+    </script>
+    <style>
+        #container {
+            width: 200px;
+            padding: 50px;
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+
+        p {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <p>클릭이벤트</p>
+    </div>
+</body>
+
+</html>

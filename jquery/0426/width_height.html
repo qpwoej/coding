@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/lib/jquery-3.6.0.js"></script>
+    <script>
+        $(function () {
+       console.log($("#d1").width());
+       console.log($("#d1").innerWidth());
+       console.log($("#d1").outerWidth());
+       console.log("-------------------");
+       console.log($("#d2").outerWidth());
+       console.log($("#d2").outerWidth());
+       console.log($("#d2").outerWidth());
+       //$("#d2").width(100); content길이를 100px로 늘림
+       $("#d2").innerWidth(100);
+       $("#d2").outerWidth(100);
+       
+
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #d1 {
+            width: 100px;
+            height: 100px;
+            padding: 30px;
+            border: 10px solid black;
+            margin: 30px;
+        }
+
+        #d2 {
+            width: 100px;
+            height: 100px;
+            padding: 30px;
+            border: 10px solid black;
+            margin: 30px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+</body>
+
+</html>

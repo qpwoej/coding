@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/lib/jquery-3.6.0.js"></script>
+    <script>
+        $(function () {
+            //hide버튼 클릭 시
+            $("#hide").click(function () {
+                $("#img").hide(1000, function () {
+                    //1000 = 1초 hide(1000,function)에서 callback함수 function은 선택사항(없어도 상관x)
+                    alert("이미지 숨기기 완료");
+                });
+
+            });
+            $("#show").click(function () {
+                $("#img").show(1000, function () {
+                    alert("이미지 보여주기 완료");
+                });
+            });
+
+            $("#toggle").click(function () {
+                $("#img").toggle(1000, function () {
+                    alert("이미지 toggle 작업 완료");
+                });
+            });
+        });
+    </script>
+    <style>
+        img {
+
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="hide">hide</button>
+    <button id="show">show</button>
+    <button id="toggle">toggle</button>
+    <hr>
+    <img src="/bird.jpg" id="img">
+    <img src="/plum.jpg">
+
+</body>
+
+</html>

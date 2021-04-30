@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/lib/jquery-3.6.0.js"></script>
+    <script>
+        function checkLogin(e) {
+            if ($("id").val().length == 0)
+                e.preventDefault();
+            if ($("#pass").val().length == 0)
+                e.preventDefault();
+        }
+        $(function () {
+            // $("#frm").submit(checkLogin);
+            $("button").click(checkLogin);
+            $("sub").click(function () {
+                $("#frm").submit();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <form id="frm">
+        <input type="text" name="id" id="id"> <br>
+        <input type="password" name="pass" id="pass"> <br>
+    </form>
+    <button>로그인</button> <a href="#" id="sub">전송</a>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/lib/jquery-3.6.0.js"></script>
+    <script>
+        $(function(){
+            //현재 적용된 클래스 목록
+            console.log($("p").attr("class"));
+            //선택된 요소에 클래스 추가
+            $("p").addClass("bold"); //console에는 안뜸
+            //선택된 요소에 클래스 삭제
+            $("p").removeClass("size"); 
+            //선택 요소에 해당 클래스 있는지 확인
+            console.log($("p").hasClass("size")); 
+
+            //선택요소에 해당 클래스가 있으면 제거,없으면 추가
+            $("p").toggleClass("size");
+        });
+    </script>
+<style>
+    .bold{
+        font-weight: bold;
+    }
+    .size{
+        font-size: 20px;
+    }
+    .underline{
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+    <p class="size underline">내용</p>
+</body>
+</html>

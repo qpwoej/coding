@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/lib/jquery-3.6.0.js"></script>
+</head>
+<script>
+    $(function () {
+        $.each($("#ul1 li"), function (i, obj) {
+            console.log(i + " - " + $(obj).html());
+        });
+
+        /*$.each($(#ul2 li), function (i) {
+                console.log(i + " - " + $(this).html());
+         같은 문법*/
+
+        $.each($("#ul2 li"), function (i) {
+            console.log(i + " - " + $(this).html());
+        });
+
+    });
+</script>
+
+<body>
+    <ul id="ul1">
+        <li>메뉴1-1</li>
+        <li>메뉴1-2</li>
+        <li>메뉴1-3</li>
+        <li>메뉴1-4</li>
+    </ul>
+
+    <ul id="ul2">
+        <li>메뉴2-1</li>
+        <li>메뉴2-2</li>
+        <li>메뉴2-3</li>
+        <li>메뉴2-4</li>
+    </ul>
+</body>
+
+</html>

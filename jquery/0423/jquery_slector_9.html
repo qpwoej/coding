@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/lib/jquery-3.6.0.js"></script>
+    <script>
+        $(function(){
+            $("#ul_1 li").slice(1,4).css("font-weight","bold");
+            //태그안의 자식요소가 하나일때만 사용
+            $("li:only-child").css("color","salmon");
+        });
+        
+    </script>
+</head>
+
+<body>
+    <ul id="ul_1">
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+        <li>메뉴5</li>
+        <li>메뉴6</li>
+    </ul>
+    <ul id="ul_2">
+        <li>메뉴1</li>
+    </ul>
+</body>
+
+</html>

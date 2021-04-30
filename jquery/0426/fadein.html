@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/lib/jquery-3.6.0.js"></script>
+    <script>
+        $(function () {
+            $(function(){
+                $("#in").click(function(){
+                    $("#img").fadeIn(1000);
+                });
+                $("#out").click(function(){
+                    $("#img").fadeOut(1000);
+                });
+                $("#to").click(function(){
+                    $("#img").fadeTo(1000,0.3); //1초에 걸쳐서 0.3만큼(opacity)
+                });
+            });
+        });
+    </script>
+    <style>
+        img {
+
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="in">fadeIn</button>
+    <button id="out">fadeOut</button>
+    <button id="to">fadeTo</button>
+    <hr>
+    <img src="/bird.jpg" id="img">
+    <img src="/plum.jpg">
+</body>
+
+</html>

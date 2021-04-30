@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>태그 속성제어</title>
+    <script src="/lib/jquery-3.6.0.js"></script>
+    <script>
+ $(function(){
+     //a 태그 안의 href속성값(문자열)을 읽어옴
+     alert($("a").attr("href"));
+    // $("a").attr("href","https:www.google.com");
+     $("a").attr({
+         "href" :"https:www.google.com", "target":"_blank"})
+     $("input").attr("required",true); // 입력란을 작성해주세요
+     $("input").removeAttr("required"); //해당속성 삭제
+     $("a").removeAttr("href");
+
+ });
+ 
+    </script>
+</head>
+
+<body>
+    <a href="#">구글로 이동</a> <br>
+    <form action="">
+        <input type="text" name="txt"><button>전송</button>
+    </form>
+</body>
+
+</html>

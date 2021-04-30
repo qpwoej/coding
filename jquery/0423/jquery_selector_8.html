@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/lib/jquery-3.6.0.js"></script>
+    <script>
+        $(function(){
+            //3번째 선택(배열로 인식 0 1 2)
+            $("ul li").eq(2).css("color","yellow"); 
+            //lt 인덱스 번호가 2보다 작은 요소 전부 선택
+            $("ul li:lt(2)").css("color","yellowgreen"); 
+             //gt 인덱스 번호가 2보다 큰 요소 전부 선택
+            $("ul li:gt(2)").css("color","skyblue"); 
+        });
+      
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+        <li>메뉴5</li>
+    </ul>
+
+    <ul>
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+        <li>메뉴5</li>
+    </ul>
+
+    <ul>
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+        <li>메뉴5</li>
+    </ul>
+</body>
+
+</html>

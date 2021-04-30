@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상클래스</title>
+    <script src="/lib/jquery-3.6.0.js"></script>
+    <script>
+        $(function () {
+            //선택 li들중 첫번째 선택
+       $("ul li:first").css("color","salmon");
+       //선택 li들중 마지막 선택
+        $("ul li:last").css("color","skyblue");
+        //선택된 전체 li들 중 무리별 첫번째,마지막 요소 선택
+        $("ul li:first-of-type").css("font-weight","bold");
+        $("ul li:last-of-type").css("font-style","italic");
+        });
+    </script>
+
+    <style>
+      /*  ul li:first-child{
+            color:salmon
+        }
+        ul li:last-child{
+            color: skyblue;
+        }*/
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+        <li>메뉴5</li>
+    </ul>
+
+    <ul>
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+        <li>메뉴5</li>
+    </ul>
+
+    <ul>
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+        <li>메뉴5</li>
+    </ul>
+</body>
+
+</html>

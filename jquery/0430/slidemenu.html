@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/lib/jquery-3.6.0.js"></script>
+
+    <script>
+        $(function () {
+            $("#Thumnailimg:first").css("border", "3px solid skyblue");
+            $("#Thumnail img").click(function () {
+                //현재 선택한게 아니면 border 적용x
+                $("#Thumnail img").not($(this)).css("border", "3px solid white");
+                $(this).css("border", "3px solid skyblue");
+
+                //이미지 교체
+                $("#container > img").attr("src", $(this).attr("src"));
+            });
+            var index = 0;
+            //실제로 보여줄 썸네일 바 크기
+            var bar_width = $("#Thumnail").width();//600px
+            //썸네일 바에있는 이미지 길이를 이용하여 전체 길이를 구함
+            var thumnail_bar_width = $("#Thumnailbar img").length * 100;
+
+
+            
+                
+           
+             $("#btn2").click(function(){
+                if(index < $("#Thumnailbar img").length)
+                    index++;
+                if(thumnail_bar_width-bar_width >= index * 100)
+                    $("#Thumnailbar").stop().animate({left:-index*100+"px"});
+                else{
+                    index--;
+                    toggle = false;
+                }
+            });
+            $("#btn1").click(function(){
+             if(index > 0)
+             index--;
+             else
+             toggle =true;
+             $("#Thumnailbar").stop().animate({left:-index*100+"px"});
+            }); 
+            setInterval(roll,1000);
+        });
+        var toggle = true;
+        function roll(){
+            if(toggle){
+                $("#btn2").click();
+            }
+            else{
+                $("#btn1").click();
+            }
+        }
+    </script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #container {
+            width: 1200px;
+            border: 1px solid gray;
+            margin: 50px auto;
+        }
+
+        #container>img {
+            width: 600px;
+            height: 600px;
+            display: block;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+
+        #button {
+            width: 600px;
+            height: 80px;
+            border: 1px solid black;
+            padding: 10px 0px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #btn1,
+        #btn2 {
+
+            width: 50px;
+            height: 50px;
+            margin-top: 15px;
+        }
+
+        #btn2 {
+            margin-left: 100px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        ul li {
+            display: inline-block;
+            box-sizing: border-box;
+        }
+
+
+
+
+        #Thumnail {
+            width: 600px;
+            height: 100px;
+            margin: 0 auto;
+            border: 1px solid gray;
+            overflow: hidden;
+        }
+
+
+        #Thumnailbar>img {
+            width: 100px;
+            height: 100px;
+            border: 3px solid white;
+            box-sizing: border-box;
+        }
+
+
+
+        #Thumnailbar {
+            width: 1000px;
+            height:100px;
+            position: relative;
+            font-size: 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <img src="/img/1.jpg">
+        <div id="Thumnail">
+            <div id="Thumnailbar">
+                <img src="/img/1.jpg" alt="">
+                <img src="/img/2.jpg" alt="">
+                <img src="/img/3.jpg" alt="">
+                <img src="/img/4.jpg" alt="">
+                <img src="/img/5.jpg" alt="">
+                <img src="/img/6.jpg" alt="">
+                <img src="/img/7.jpg" alt="">
+                <img src="/img/8.jpg" alt="">
+                <img src="/img/9.jpg" alt="">
+            </div>
+        </div>
+        <div id="button">
+   
+                <a href="#"> <img id="btn1" src="/img/iconfinder_23_3049258.png"> </a>
+                <a href="#"> <img id="btn2" src="/img/iconfinder_20_3049259.png"> </a>
+            
+
+        </div>
+    </div>
+</body>
+
+</html>

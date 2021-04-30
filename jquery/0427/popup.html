@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>팝업창 예제</title>
+    <script src="/lib/jquery-3.6.0.js"></script>
+    
+    <style>
+
+body{
+    height: 1000px;
+}
+
+        #container,
+        img {
+            width: 200px;
+            height: 200px;
+            position: fixed;
+            left: 120px;
+            top: 120px;
+        }
+
+
+
+        #dv2 {
+            width: 200px;
+            height: 30px;
+            position: fixed;
+            left: 120px;
+            top: 290px;
+            background-color: rgba(255, 255, 255, 0.582);
+        }
+
+        input {
+            position: fixed;
+            left: 120px;
+            top: 300px;
+        }
+
+        #ne {
+            position: fixed;
+            left: 140px;
+            top: 280px;
+            color: grey;
+        }
+
+        #x {
+            position: fixed;
+            left: 305px;
+            top: 120px;
+            z-index: 1;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("#x").click(function(){
+                $("html").remove();
+            });
+            $("#container img").click(function(){
+                local.href= "https://www.naver.com";
+            })
+
+
+        });
+    </script>
+</head>
+
+<body>
+
+  
+    <div id="container">
+        <a href="#" id="x">X</a>
+        <img src="/bird.jpg">
+        <div id="dv2">
+            <input type="checkbox" id="check">
+            <p id="ne">다시보지않기</p>
+        </div>
+    </div>
+    
+    
+</body>
+
+</html>

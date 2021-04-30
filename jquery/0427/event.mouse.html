@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/lib/jquery-3.6.0.js"></script>
+    <script>
+        $(function () {
+            $("#container").mousemove(function (event) {
+                var xpos = event.pageX - $(this).offset().left;
+                var ypos = event.pageY - $(this).offset().top;
+                var result = "x좌표: " + xpos + "<br>"
+                    + "y좌표:" + ypos;
+                $(this).html(result);
+            });
+            $("#container").on("mousedown mouseup",function(event) {
+                console.log(event.type + " : " + event.which)
+               // console.log(event.which + "" + event.button);
+                if (event.which == 3)
+                    alert("오른쪽 클릭은 사용할수 없습니다");
+            });
+         
+        });
+    </script>
+    <style>
+        #container {
+            width: 1000px;
+            height: 600px;
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container"></div>
+</body>
+
+</html>
