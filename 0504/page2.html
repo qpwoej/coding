@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/lib/jquery-3.6.0.js"></script>
+    <script>
+        $(function () {
+            var flag = false;
+            $("#submenubar").slideUp(0);
+            //true 내려와있는 상태 
+            //false 올라가있ㄴㄴ 상태
+            $("#main_menu").mouseenter(function () {
+                if (flag) return;
+                $("#submenubar").slideDown(1000, function () { flag = true; });
+            });
+
+            $("#main_menu").mouseleave(function () {
+                if (flag) return;
+                $("#submenubar").slideUp(1000, function () { flag = false; });
+            });
+
+            //메뉴 영역 밖이나 메뉴를 클릭하면 접는 부분
+            $("#main_menu, html").on("click", function () {
+                if (!flag) return;
+                $("#submenubar").slideUp(1000, function () { flag = false; });
+            });
+            //nav슬라이드
+
+        });
+    </script>
+    <style>
+       *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            width: 1200px;
+            height: 50px;
+            background-color: gainsboro;
+            margin:0 auto;
+        }
+        header figure{
+            height: 100%;
+            padding:5px 0px;
+            width: 300px;
+            float: right;
+        }
+        header figure img{
+            width: 40px;
+            float: left;
+        }
+        figure figcaption{
+            float: left;
+            height: 40px;
+            padding-left: 5px;
+        }
+        figure figcaption h3{
+            font-size:16px;
+            line-height: 20px;
+            color:#564c4b;
+        }
+        figure figcaption p{
+            font-size:12px;
+            line-height: 20px;
+        }
+        figure a:link,figure a:visited{
+            color: #6d6564;
+            text-decoration: none;
+        }
+        #carousel{
+            width: 1200px;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+            margin: 0 auto;
+            clear: both;
+        }
+        #slide{
+            height: 400px;
+        }
+        #image_container{
+            width: 4800px;
+            height: 400px;
+        }
+        #image_container > div{
+            width:1200px;
+            height: 400px;
+            float: left;
+            background-repeat: no-repeat;
+            background-position:center;
+            background-size: 100% 100%;
+        } 
+        .slide_image1{
+            background-image: url('/dog.jpg');
+        }
+        .slide_image2{
+            background-image: url('/bird.jpg');
+        }
+        .slide_image3{
+            background-image: url('/plum.jpg');
+        }
+        .slide_image4{
+            background-image: url('/snow.jpg');
+        }
+        #carousel button{
+            width:100px;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.336);
+            background-image: url('/resource/img/arrow.png');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position:center;
+            position: absolute;
+            border : none;
+        }
+        #next{
+            top:0px;
+            right: 0px;
+            transform: rotate(180deg);
+        }
+        #pre{
+            top:0px;
+            left: 0px;
+        }
+
+
+        nav {
+            background-color: gainsboro;
+            width: 1200px;
+            height: 60px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            border: 1px solid black;
+        }
+
+
+        ul {
+            list-style-type: none;
+        }
+
+        #main_menu {
+            width: 1200px;
+
+        }
+
+        #main_menu li {
+            display: inline-block;
+            font-weight: bold;
+            font-size: 20px;
+            margin: 0px 20px;
+
+        }
+
+        #container {
+            width: 1200px;
+            margin: 0 auto;
+
+        }
+
+        table {
+            border-collapse: collapse;
+            display: inline-block;
+            padding: 50px 120px;
+        }
+
+        caption {
+            font-weight: bold;
+            font-size: 26px;
+            padding: 20px;
+        }
+
+        td,
+        th {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid grey;
+
+        }
+
+        th {
+            background-color: gainsboro;
+        }
+
+        footer {
+            width: 1200px;
+            height: 1200px;
+            margin: 0 auto;
+            background-color: gainsboro;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <figure>
+            <img src="/iconfinder_icons_user2_1564535.png">
+            <figcaption>
+                <h3>OOO님이 로그인 하셨습니다.</h3>
+                <p><a href="#">로그아웃</a> | <a href="#">회원정보수정</a></p>
+            </figcaption>
+        </figure>
+    </div>
+    <div id="carousel">
+        <div id="slide">
+            <div id="image_container">
+                <div class="slide_image1"></div>
+                <div class="slide_image2"></div>
+                <div class="slide_image3"></div>
+                <div class="slide_image4"></div>
+            </div>
+        </div>
+        <button id="next"></button>
+        <button id="pre"></button>
+    </div>
+    </header>
+
+    <nav>
+        <ul id="main_menu">
+            <li>HOME</li>
+            <li>예약</li>
+            <li>펜션스토리</li>
+            <li>펜션소개</li>
+        </ul>
+    </nav>
+    <div id="submenubar">
+        <ul class="sub">
+            <li>예약하기</li>
+            <li>예약조회</li>
+        </ul>
+        <ul class="sub">
+            <li>커뮤니티</li>
+            <li>갤러리</li>
+            <li>QnA</li>
+        </ul>
+        <ul class="sub">
+            <li>오시는길</li>
+            <li>시설조회</li>
+        </ul>
+    </div>
+
+    <div id="container">
+        <table>
+            <caption>공지사항</caption>
+            <tr>
+                <th>글번호</th>
+                <th>제목</th>
+                <th>작성일</th>
+                <th>조회수</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>ooo</td>
+                <td>2021-05-04</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>ooo</td>
+                <td>2021-05-04</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>ooo</td>
+                <td>2021-05-04</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>ooo</td>
+                <td>2021-05-04</td>
+                <td>13</td>
+            </tr>
+
+        </table>
+
+        <table>
+            <caption>공지사항2</caption>
+            <tr>
+                <th>글번호</th>
+                <th>제목</th>
+                <th>작성일</th>
+                <th>조회수</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>ooo</td>
+                <td>2021-05-04</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>ooo</td>
+                <td>2021-05-04</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>ooo</td>
+                <td>2021-05-04</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>ooo</td>
+                <td>2021-05-04</td>
+                <td>13</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <footer>
+        <p>사업자 정보:OOOOOO</p>
+        <p>연락처:OOO-OOOO-OOOO</p>
+        <p>이메일:OOOOOO@gmail.com</p>
+    </footer>
+
+
+
+</body>
+
+</html>
