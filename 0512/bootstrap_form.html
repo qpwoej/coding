@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>메인 페이지</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="/bootstrap-3.3.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/bootstrap-3.3.2-dist/css/bootstrap-theme.css">
+    <script src="/lib/jquery-3.6.0.js"></script>
+    <script src="/bootstrap-3.3.2-dist/js/bootstrap.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        /*article float가 left니 margin-top영역을 못잡음*/
+    </style>
+    <script>
+        $(function () {
+
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-9">
+                <form action="">
+                    <div class="form-group">
+                        <label for="txt">텍스트</label>
+                        <input type="text" class="form-control" id="txt" placeholder="텍스트를 입력하세요">
+                        <label for="pass">암호</label>
+                        <input type="password" class="form-control" id="pass" placeholder="텍스트를 입력하세요">
+                        <select class="form-control">
+                            <option value="">선택1</option>
+                            <option value="">선택2</option>
+                            <option value="">선택3</option>
+                            <option value="">선택4</option>
+                        </select>
+                        <label>date picker</label>
+                        <input type="date" class="form-control">
+                        <textarea class="form-control" rows="10"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="col-xs-6">
+                <form class="form-inline">
+                    <div class="form-group">
+                    <label>텍스트</label>
+                    <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                    <label for="pass">암호</label>
+                    <input type="password" class="form-control" id="pass" placeholder="텍스트를 입력하세요">
+                   </div>
+                   <div class="form-group">
+                    <select class="form-control">
+                        <option value="">선택1</option>
+                        <option value="">선택2</option>
+                        <option value="">선택3</option>
+                        <option value="">선택4</option>
+                    </select>
+                    </div>
+                    <div class="form-group">
+                    <label>date picker</label>
+                    <input type="date" class="form-control">
+                    </div>
+                    <textarea class="form-control" rows="10"></textarea>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

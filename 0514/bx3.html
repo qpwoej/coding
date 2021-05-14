@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="/lib/jquery-3.6.0.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script>
+        $(function () {
+            $('.bxslider').bxSlider({
+                mode: 'horizontal',
+                captions: true,
+                slideWidth: 600,
+                maxSlides: 3,
+                minSlides: 2
+            });
+
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+            background-color: rgb(68, 68, 68);
+        }
+
+        .bx-wrapper .bx-next,
+        .bx-wrapper .bx-prev {
+            background-image: url(/bxslider-4-4.2.12/src/images/controls.png);
+        }
+
+
+        .bx-wrapper .bx-pager.bx-default-pager a {
+            width: 20px;
+            background-color: gainsboro
+        }
+
+        .bx-pager.link-active {
+            background-color: rgb(139, 138, 138);
+        }
+
+
+
+        header {
+            width: 100%;
+            color: white;
+            display: inline-block;
+        }
+
+        h1 {
+            text-shadow: 2px 5px 8px #ffffff;
+        }
+
+        #header_ul {
+            list-style-type: none;
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+        }
+
+        #fotter_ul {
+            list-style-type: none;
+            font-size: 20px;
+            color: white;
+            padding: 20px;
+        }
+
+        h2 {
+            color: white;
+            font-size: 30px;
+        }
+
+        #index {
+            padding: 25px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1>QuickMedia</h1>
+            <ul id="header_ul">
+                <li>홈</li>
+                <li>카테고리</li>
+                <li>실시간 방송</li>
+                <li>찜</li>
+                <li>로그인</li>
+            </ul>
+        </header>
+
+        <hr>
+
+        <div class="bxslider">
+            <div><img src="/snow.jpg" title="VOD 내용"></div>
+            <div><img src="/snow.jpg" title="VOD 내용"></div>
+            <div><img src="/snow.jpg" title="VOD 내용"></div>
+        </div>
+
+        <h2>지금 핫한 VOD 목록</h2>
+        <div class="bxslider">
+            <div><img src="/plum.jpg" title="VOD 제목"></div>
+            <div><img src="/plum.jpg" title="VOD 제목"></div>
+            <div><img src="/plum.jpg" title="VOD 제목"></div>
+        </div>
+
+        <h2>사용자 추천 VOD</h2>
+        <div class="bxslider">
+            <div><img src="/dog.jpg" title="VOD 제목"></div>
+            <div><img src="/dog.jpg" title="VOD 제목"></div>
+            <div><img src="/dog.jpg"" title=" VOD 제목"></div>
+        </div>
+
+        <hr>
+        <h2 id="index">공지사항 QuickMedia 접속 불량 현상 해결 공지</h2>
+        <hr>
+
+        <footer>
+            <ul id="fotter_ul">
+                <li>회사명 : QuickMedia</li>
+                <li>대표이사 : 홍길동</li>
+                <li>사업자번호 : 000-000-00000</li>
+                <li>주소 : 서울시 강서구 화곡동</li>
+                <li>고객센터 : 0000-0000</li>
+            </ul>
+        </footer>
+
+
+
+    </div>
+</body>
+
+</html>

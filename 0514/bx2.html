@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>메인 페이지</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="/lib/jquery-3.6.0.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+
+
+
+
+    <script>
+        /*  responsive = 반응형 */
+        $(function () {
+            $('.slider').bxSlider(); ({
+                mode: 'fade',
+                captions: true,
+                slideWidth: 600,
+                auto: true,
+                pause: 1000,
+                onSlideNext: function (d) {
+                    console.log(d);
+                }
+            });
+
+        });
+    </script>
+
+
+    <style>
+        bx-pager {
+            bottom: 20px !important;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a {
+            width: 30px;
+            height: 10px;
+            background-color: cornflowerblue;
+        }
+
+
+        .bx-wrapper .bx-next,
+        .bx-wrapper .bx-prev {
+            background-image: url(/bxslider-4-4.2.12/src/images/controls.png);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="slider">
+        <div><img src="/snow.jpg" title="Funky roots"></div>
+        <div><img src="/plum.jpg" title="The long and winding road"></div>
+        <div><img src="/dog.jpg" title="Happy trees"></div>
+        <div><img src="/bird.jpg" title="Happy trees"></div>
+        <div><img src="/img/5.jpg" title="Happy trees"></div>
+        <div><img src="/img/6.jpg" title="Happy trees"></div>
+    </div>
+</body>
+
+</html>

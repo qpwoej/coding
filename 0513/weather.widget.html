@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>메인 페이지</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="/resource/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/resource/bootstrap/css/bootstrap-theme.css">
+    <script src="/resource/bootstrap/js/bootstrap.js"></script>
+
+
+
+    <script src="/lib/jquery-3.6.0.js"></script>
+    <script>
+        $(function () {
+            $("#btn_weather").click(function () {
+                var city = ["Seoul", "Daejeon", "Daegu", "Busan", "Gwangju"];
+                for (i = 0; i < city.length; i++) {
+                    var appid = "2e97d33756eb79ae82814193aac855e0";
+                    var apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city[i]}&appid=${appid}`;
+                    console.log(apiUrl);
+                    $.ajax({
+                        url: apiUrl,
+                        type: "get",
+                        dataType: "json",
+                        success: function (data) {
+                            console.log(data.name);
+                            var tag = "<tr>";
+                            tag += "<td class='text-center'>" + data.name + "</td>";
+                            tag += "<td class='text-center'>" + data.weather[0].main + "</td>";
+                            tag += "<td class='text-center'>" + (Number(data.main.temp) - 273.15) + "</td>";
+                            tag += "<td class='text-center'>" + (Number(data.main.temp) - 273.15) + "</td>";
+                            tag += "<td class='text-center'>" + (Number(data.main.temp) - 273.15) + "</td>";
+                            tag += "</tr>";
+                            $("#result").append();
+                        }
+                    });
+                }
+            });
+            $("#btn_weather").click();
+        });
+    </script>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 0 auto;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        tr,
+        th {
+            padding: 10px;
+        }
+
+        #btn_weather {
+            background-color: rgb(62, 170, 212);
+            color: white;
+            border: none;
+            width: 120px;
+            height: 40px;
+            font-weight: bold;
+        }
+
+        /*제이쿼리 slime버전은 effects ,ajax 미포함*/
+    </style>
+</head>
+
+<body>
+    <div id="openweathermap-widget-11"></div>
+    <script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script><script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 11,cityid: '1835848',appid: '2e97d33756eb79ae82814193aac855e0',units: 'metric',containerid: 'openweathermap-widget-11',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script>
+</body>
+
+</html>
