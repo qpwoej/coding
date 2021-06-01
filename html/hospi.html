@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--익스버전을 최신edge모드로 표시,모바일에서는 있어도그만 없어도그만.-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--뷰포트 확대축소 불가능 설정-->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <!--콘텐츠 아이폰 노치부분 커버-->
+    <meta name="viewport" content="viewport-fit=cover">
+    <!--아이폰 전화번호 링크화 방지-->
+    <meta name="format-detection" content="telephone=no">
+    <!--파비콘 (title옆의 icon)-->
+    <link rel="shortcut icon" href="/image/dog2.png">
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+        }
+
+
+
+        @font-face {
+            font-family: 'md';
+            src: url('/font/Jua/Jua-Regular.ttf');
+        }
+
+
+        nav {
+            width: 100%;
+            height: 100px;
+            display: inline-block;
+            background-color: #FF9E0D;
+
+        }
+
+        #dogicon {
+            width: 10%;
+            margin-left: 2%;
+        }
+
+        #menu {
+            margin-left: 80%;
+            width: 5%;
+
+        }
+
+
+
+        nav p {
+            float: right;
+            text-decoration: underline;
+            margin-right: 4%;
+            font-size: 2em
+        }
+
+        section {
+            margin-top: 1.6em;
+        }
+
+        section img {
+            width: 7em;
+        }
+
+        #middle img {
+            width: 50px;
+        }
+
+        #middle {
+            width: 100%;
+            height: 100px;
+            text-align: center;
+            margin-top: 15%;
+        }
+
+        #middle p {
+            font-size: 2.5em;
+            text-align: center;
+            margin-top: 10%;
+
+        }
+
+        input {
+            width: 20em;
+            height: 5em;
+            border: 8px solid #FF9E0D;
+            padding-left: 7em;
+            font-size: 20px;
+            background-image: url(/image/magnifier.png);
+            background-position: 5px center;
+            background-size: 25px;
+            background-repeat: no-repeat;
+            background-position-x: 11em;
+        }
+
+        p {
+            display: inline-block;
+        }
+
+        #mapping {
+            text-align: center;
+            margin-top: 2%;
+            padding: 3em 0px;
+            
+            
+        }
+
+        
+
+        #map_p1 {
+            float: left;
+            margin-left: 4em;
+        }
+
+        #map_p2 {
+            float: right;
+            margin-right: 4em
+        }
+
+
+        #mapping img{
+            width: 40px;
+            float: left;
+            margin-left: 4em;
+            
+        }
+
+
+        #footer {
+            margin-top: 70em;
+        }
+
+        #footer button {
+            width: 20em;
+            height: 3em;
+            color: white;
+            font-size: 2.5em;
+            background-color: #FF9E0D;
+            border: none;
+            border-radius: 2em;
+            margin-top: 4%;
+
+
+        }
+
+
+        footer {
+            width: 100%;
+            height: 8em;
+            display: inline-block;
+            box-shadow: 1px 0px 12px 10px gainsboro;
+            clear: both;
+            margin-top: 15.8em;
+        }
+
+        footer img {
+            width: 4.5em;
+            margin-left: 8.5em;
+            padding-top: 1.8em;
+        }
+
+
+        
+
+        /*
+        1.
+        overflow:hidden 사용 시 아이폰 하위버전에서 적용되지않아 레이아웃이 깨질 우려가 있으니
+        position:fixed + 가로 세로 100%으로 크기를 지정하면 아이폰에서도 적용이됨
+        
+        2. min: width 320px;
+        현재 모바일 가로길이 최소 기종이 320px.
+        창크기를 아무리 축소시켜도 현재로서 320px 미만으로는 줄지않음 
+        
+        3.탭 하이라이트 컬러 변경
+        보통 모바일에서 a태그를 클릭시 background컬러가 blue로 나오는데,
+        이를 변경 시 사용
+
+        4.미디어 쿼리
+        */
+    </style>
+
+
+</head>
+
+<body>
+    <!--모바일에서는 대부분 태그들이 px이아닌 %로 크기가 잡히므로
+      border나 padding입력 시 레이아웃이 깨지므로 box-sizing 설정 습관화가 필요 -->
+
+
+    <nav>
+        <section>
+            <img id="dogicon" src="/image/fontlog.png">
+            <img id="menu" src="/image/menu_icon.png">
+        </section>
+    </nav>
+
+
+    <div id="middle">
+        <input type="text" placeholder="병원검색">
+    </div>
+
+
+    <div id="mapping">
+        
+        <img src="/image/place.png" alt="">
+        <p id="map_p1">현위치</p>
+        <p id="map_p2">주소 검색</p>
+    </div>
+
+    <div id="map" style="width:100%;height:900px;"></div>
+
+
+    <footer>
+        <img src="/image/home.png">
+        <img src="/image/bulb.png">
+        <img src="/image/hospital.png">
+        <img src="/image/door.png">
+    </footer>
+
+
+
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1cd393634a418d44ad20dd6702731a9b"></script>
+    <script>
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+            mapOption = {
+                center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+                level: 3 // 지도의 확대 레벨
+            };
+
+        // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+        var map = new kakao.maps.Map(mapContainer, mapOption);
+    </script>
+
+</body>
+
+</html>

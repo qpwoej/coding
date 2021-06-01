@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--익스버전을 최신edge모드로 표시,모바일에서는 있어도그만 없어도그만.-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--뷰포트 확대축소 불가능 설정-->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <!--콘텐츠 아이폰 노치부분 커버-->
+    <meta name="viewport" content="viewport-fit=cover">
+    <!--아이폰 전화번호 링크화 방지-->
+    <meta name="format-detection" content="telephone=no">
+    <!--파비콘 (title옆의 icon)-->
+    <link rel="shortcut icon" href="/image/dog2.png">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+        }
+
+        #p_1 {
+            font-weight: bold;
+            font-size: 3em;
+            font-family: 'md';
+
+        }
+
+        #p_2 {
+            color: #4F4F4F;
+            font-family: 'md';
+            margin-top: 1%;
+            font-size: 1.3em;
+
+
+        }
+
+        nav {
+            width: 100%;
+            height: 100px;
+            margin-top: 15%;
+            display: inline-block;
+
+        }
+
+        nav img {
+            width: 4%;
+            margin-left: 4%;
+        }
+
+        nav p {
+            float: right;
+            text-decoration: underline;
+            margin-right: 4%;
+            font-size: 2em
+        }
+
+        section {
+            margin-top: 10%;
+            text-align: center;
+        }
+
+        section p {
+            font-size: 3em;
+            font-family: 'md';
+        }
+
+        section img {
+            width: 40%;
+            text-align: center;
+        }
+
+        button {
+            float: right;
+            color: white;
+            background-color: #FF9E0D;
+            border: none;
+            border-radius: 2em;
+            width: 15em;
+            height: 4em;
+            font-size: 1em;
+            margin-right: 2%;
+            float: right;
+            margin-top: 79.6%;
+        }
+
+        @font-face {
+            font-family: 'md';
+            src: url('/font/Jua/Jua-Regular.ttf');
+        }
+
+        input {
+            width: 18em;
+            height: 3em;
+            font-size: 2em;
+            border: 1px solid #9B9B9B;
+            padding-left: 1em;
+            border-radius: 3em;
+            margin-top: 0.8em;
+        }
+
+
+
+        /*
+        1.
+        overflow:hidden 사용 시 아이폰 하위버전에서 적용되지않아 레이아웃이 깨질 우려가 있으니
+        position:fixed + 가로 세로 100%으로 크기를 지정하면 아이폰에서도 적용이됨
+        
+        2. min: width 320px;
+        현재 모바일 가로길이 최소 기종이 320px.
+        창크기를 아무리 축소시켜도 현재로서 320px 미만으로는 줄지않음 
+        
+        3.탭 하이라이트 컬러 변경
+        보통 모바일에서 a태그를 클릭시 background컬러가 blue로 나오는데,
+        이를 변경 시 사용
+
+        4.미디어 쿼리
+        */
+    </style>
+</head>
+
+<body>
+    <!--모바일에서는 대부분 태그들이 px이아닌 %로 크기가 잡히므로
+      border나 padding입력 시 레이아웃이 깨지므로 box-sizing 설정 습관화가 필요 -->
+
+
+    <div>
+        <nav>
+            <a href="/html/sign_in2.html"><img src="/image/backicon.png"></a>
+            <p>skip</p>
+        </nav>
+
+
+        <section>
+            <p id="p_1">강아지 정보를 저장했어요!</p>
+            <p id="p_2">이제 Edu dog의  기능을 사용해보세요</p>
+            <img src="/image/sign_in_dog2.png">
+
+
+
+        </section>
+
+
+        <a href="/html/mainhome.html"><button type="submit">다음으로 넘어가기 ></button></a>
+
+    </div>
+</body>
+
+</html>

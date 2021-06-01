@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--익스버전을 최신edge모드로 표시,모바일에서는 있어도그만 없어도그만.-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--뷰포트 확대축소 불가능 설정-->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <!--콘텐츠 아이폰 노치부분 커버-->
+    <meta name="viewport" content="viewport-fit=cover">
+    <!--아이폰 전화번호 링크화 방지-->
+    <meta name="format-detection" content="telephone=no">
+    <!--파비콘 (title옆의 icon)-->
+    <link rel="shortcut icon" href="/image/dog2.png">
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+        }
+
+        nav {
+            width: 100%;
+            height: 100px;
+            margin-top: 15%;
+            display: inline-block;
+
+        }
+
+        nav img {
+            width: 4%;
+            margin-left: 4%;
+        }
+
+        nav p {
+            float: right;
+            text-decoration: underline;
+            margin-right: 4%;
+            font-size: 2em
+        }
+
+        section {
+            text-align: center;
+            margin-top: 10%
+        }
+
+        section img {
+            width: 35%
+        }
+
+        @font-face {
+            font-family: 'md';
+            src: url(/font/Jua/Jua-Regular.ttf);
+        }
+
+        #p_1 {
+            font-weight: bold;
+            font-size: 3em;
+            font-family: 'md';
+
+        }
+
+        #p_2 {
+            color: darkgray;
+            font-family: 'md';
+            margin-top: 1%;
+            font-size: 1.3em;
+
+
+        }
+
+        form {
+            text-align: center;
+            margin-top: 10%;
+        }
+
+        form input {
+            width: 50em;
+            height: 7em;
+            border-radius: 5em;
+            margin-bottom: 2%;
+            border: 0.5 solid gray;
+            border: none;
+            margin-bottom: 6em;
+        }
+
+
+
+        input::-webkit-input-placeholder {
+            color: #C4C4C4 !important;
+            font-size: 1.3em;
+            padding-left: 0.5em;
+        }
+
+
+
+
+        #container {
+            margin-top: 5%;
+        }
+
+
+        #next {
+            float: right;
+            color: white;
+            background-color: #FF9E0D;
+            border: none;
+            border-radius: 2em;
+            width: 15em;
+            height: 4em;
+            font-size: 1em;
+            margin-right: 2%;
+            float: right;
+            margin-top: 3%;
+        }
+
+
+        form a {
+            display: inline-block;
+            padding: 8px 0px;
+
+        }
+
+        form a>img {
+            width: 32px;
+            margin-left: -6em;
+            margin-bottom: -0.5em;
+        }
+
+        input {
+            background-color: #FF9E0D;
+            opacity: 20%;
+        }
+
+        #inbl {
+            text-align: center;
+            margin-bottom: 2em;
+        }
+
+
+        #dogsele {
+            width: 18em;
+            height: 3.5em;
+            font-size: 21px;
+            border: 1px solid #9B9B9B;
+            color: #9B9B9B;
+            border-radius: 4em;
+            background-color: white;
+            margin: 0 auto;
+            margin-right: 2em;
+            font-family: 'md';
+        }
+
+        @font-face {
+            font-family: 'md';
+            src: url(/font/Jua/Jua-Regular.ttf);
+        }
+
+        /*
+        1.
+        overflow:hidden 사용 시 아이폰 하위버전에서 적용되지않아 레이아웃이 깨질 우려가 있으니
+        position:fixed + 가로 세로 100%으로 크기를 지정하면 아이폰에서도 적용이됨
+        
+        2. min: width 320px;
+        현재 모바일 가로길이 최소 기종이 320px.
+        창크기를 아무리 축소시켜도 현재로서 320px 미만으로는 줄지않음 
+        
+        3.탭 하이라이트 컬러 변경
+        보통 모바일에서 a태그를 클릭시 background컬러가 blue로 나오는데,
+        이를 변경 시 사용
+
+        4.미디어 쿼리
+        */
+    </style>
+    <script>
+        $(function () {
+           $("#dogsele").click(function(){
+               $("#dogsele").css("background-color","#FF9E0D");
+               $("#dogsele").css("color","white");
+               $("#dogsele").css("border","none");
+           });
+        });
+
+
+        
+	/* function check(){
+		
+		var result =""
+		$('input[name=qutstionNum]').each(function(){
+			
+			if($("input:radio[name=A_"+$(this).val()+"]:checked").val() == undefined){
+				alert($(this).val()+"번 질문에 응답해 주세요");
+				$("input:radio[name=A_"+$(this).val()+"]").focus();
+				$("input[name=Result]").val("");
+				result = "";
+				return false;
+			}
+			else{
+				result+=$(this).val()+":"+$("input:radio[name=A_"+$(this).val()+"]:checked").val()+"|"
+			}
+		//	return false;
+		});
+		$("input[name=Result]").val(result);
+		
+		if(result != "" ){
+			document.frm.submit();
+		}
+	} */
+        
+    </script>
+</head>
+
+<body>
+    <!--모바일에서는 대부분 태그들이 px이아닌 %로 크기가 잡히므로
+      border나 padding입력 시 레이아웃이 깨지므로 box-sizing 설정 습관화가 필요 -->
+
+
+    <div>
+        <nav>
+            <a href="/html/sign_in2.html"><img src="/image/backicon.png"></a>
+
+        </nav>
+
+        <section>
+            <p id="p_1">강아지 종 선택하기</p>
+            <p id="p_2">강아지는 2마리까지 선택 가능합니다</p>
+            <img src="/image/sign_in_dog1.png">
+        </section>
+
+
+        <div id="container">
+            <form action="" method="get">
+                <input type="text" placeholder="" name="search" id="search">
+                <a><img src="/image/magnifier.png" alt="검색 아이콘"></a>
+            </form>
+            <div id="inbl">
+                <button id="dogsele">미니핀</button>
+                <button id="dogsele">포메라니안</button>
+            </div>
+
+            <div id="inbl">
+                <button id="dogsele">푸들</button>
+                <button id="dogsele">말티즈</button>
+            </div>
+
+            <div id="inbl">
+                <button id="dogsele">파피용</button>
+                <button id="dogsele">치와와</button>
+            </div>
+
+            <div id="inbl">
+                <button id="dogsele">닥스훈트</button>
+                <button id="dogsele">리트리버</button>
+            </div>
+
+            <div id="inbl">
+                <button id="dogsele">닥스훈트</button>
+                <button id="dogsele">리트리버</button>
+            </div>
+
+        </div>
+        <a href="/html/choose_dog.html"><button id="next" type="submit">다음으로 넘어가기 ></button></a>
+
+    </div>
+</body>
+
+</html>

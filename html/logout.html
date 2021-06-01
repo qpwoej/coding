@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--익스버전을 최신edge모드로 표시,모바일에서는 있어도그만 없어도그만.-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--뷰포트 확대축소 불가능 설정-->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <!--콘텐츠 아이폰 노치부분 커버-->
+    <meta name="viewport" content="viewport-fit=cover">
+    <!--아이폰 전화번호 링크화 방지-->
+    <meta name="format-detection" content="telephone=no">
+    <!--구글 api-->
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <!--파비콘 (title icon)-->
+    <link rel="shortcut icon" href="/image/dog2.png">
+    <meta name="google-signin-client_id"
+        content="617296035552-3etrncvprgrvqu26dikeq6bgg3ss5nsv.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src='https://developers.kakao.com/sdk/js/kakao.js'></script>
+    <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js"
+        charset="utf-8"></script>
+
+    <title>EduDOG : 로그인</title>
+
+
+    <!-- 
+        1.
+        overflow:hidden 사용 시 아이폰 하위버전에서 적용되지않아 레이아웃이 깨질 우려가 있으니
+        position:fixed + 가로 세로 100%으로 크기를 지정하면 아이폰에서도 적용이됨
+        
+        2. min: width 320px;
+        현재 모바일 가로길이 최소 기종이 320px.
+        창크기를 아무리 축소시켜도 현재로서 320px 미만으로는 줄지않음 
+        
+        3.탭 하이라이트 컬러 변경
+        보통 모바일에서 a태그를 클릭시 background컬러가 blue로 나오는데,
+        이를 변경 시 사용
+
+        4.미디어 쿼리
+        -->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html {
+            background: url('/image/dog_s.jpg') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+
+        }
+
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+        }
+
+        #container {
+            width: 100%;
+            height: 100%;
+        }
+
+        #wrap {
+            min-width: 320px;
+            width: 100%;
+            text-align: center;
+        }
+
+        #logoimg {
+            margin-top: 20%;
+        }
+
+        .logo_p {
+            font-size: 3em;
+            color: white;
+            font-family: 'md';
+        }
+
+        img {
+            width: 30%;
+        }
+
+        @font-face {
+            font-family: 'md';
+            src: url(/font/Jua/Jua-Regular.ttf);
+        }
+
+        section {
+            margin-top: 40%;
+        }
+
+        input {
+            border-radius: 1.5em;
+            border: none;
+            width: 46em;
+            height: 8em;
+            margin-bottom: 2em;
+            padding-left: 4em;
+        }
+
+        input::-webkit-input-placeholder {
+            color: #C4C4C4 !important;
+            font-size: 2em;
+            font-family: 'md';
+        }
+
+
+
+        button {
+            background-color: #C4C4C4;
+            border: none;
+            border-radius: 5em;
+            font-size: 2em;
+            width: 7em;
+            height: 3em;
+            color: white;
+            margin-top: 4%;
+        }
+
+        button:hover {
+            background-color: #FF9E0D;
+        }
+
+
+
+        #signin_p {
+            font-size: 1.7em;
+            margin-top: 1%;
+        }
+
+        a:link,
+        a:visited {
+            color: white;
+        }
+
+
+        ul {
+            list-style-type: none;
+        }
+
+        #sns_conta {
+            width: 100%;
+            height: 50px;
+            margin-top: 2em;
+            margin: 2em 0px;
+        }
+
+        #sns_login {
+            display: inline-flex;
+            margin: 0 auto;
+            align-items: center;
+
+        }
+
+
+        #naver_id_login img {
+            width: 120px;
+            height: 36px;
+            margin-top: 3%;
+        }
+
+        #kakao-login-btn img {
+            width: 50px;
+
+        }
+
+        #kakao-login-btn img {
+            width: 120px;
+            height: 36px;
+            margin-top: 3%;
+            margin-left: 20px;
+        }
+
+
+        .g-signin2 {
+            margin-left: 20px;
+        }
+    </style>
+    <script>
+
+
+        function init_kakao() {
+            Kakao.init('1cd393634a418d44ad20dd6702731a9b');
+        }
+        function getProfile() {
+            Kakao.API.request({
+                url: '/v2/user/me',
+                success: function (response) {
+                    console.log(response);
+                    $("#result").html(response.id + " " +
+                        response.kakao_account.email + " " + response.kakao_account.profile.nickname);
+                },
+                fail: function (error) {
+                    console.log(error);
+                }
+            });
+        }
+        function loginWithKakao() {
+
+            Kakao.Auth.login({
+                success: function (authObj) {
+                    //alert(JSON.stringify(authObj))
+                    console.log(JSON.stringify(authObj));
+                    console.log(authObj);
+                    getProfile();
+                },
+                fail: function (err) {
+                    alert(JSON.stringify(err))
+                },
+            });
+        }
+
+
+
+
+
+        //구글
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+            console.log('Name: ' + profile.getName());
+            console.log('Image URL: ' + profile.getImageUrl());
+            console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+        }
+        function signOut() {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function () {
+                console.log('User signed out.');
+            });
+        }
+
+
+        $(function () {
+            init_kakao();
+            $("#logout").click(function (e) {
+                e.preventDefault();
+                if (Kakao.Auth.getAccessToken()) {
+                    console.log("토근이 존재합니다.", Kakao.Auth.getAccessToken());
+                    Kakao.Auth.logout(function () {
+                        console.log("로그아웃 되었습니다.", Kakao.Auth.getAccessToken());
+                    });
+                    $("#result").html("");
+
+                } else {
+                    alert("로그인 해주세요");
+                }
+            });
+            $("#unlink").click(function (e) {
+                e.preventDefault();
+                Kakao.API.request({
+                    url: '/v1/user/unlink',
+                    success: function (response) {
+                        console.log("탈퇴 결과 : ", response);
+                    },
+                    fail: function (err) {
+                        alert("탈퇴 실패");
+                        console.log("탈퇴 실패 : ", err);
+                    }
+                });
+            });
+        });
+
+
+        function idCheck() {
+            var id = $("#id");
+            if ($(id).val().length < 6 || $(id).val().length.length > 20) {
+                alert("아이디는 6~20글자로 작성하세요");
+                return false;
+            }
+            if (!isNaN($(id).val())) {
+                alert("아이디는 숫자만 쓸수 없습니다.");
+                return false;
+            }
+            if ($(id).val().indexOf(" ") != -1) {
+                alert("아이디에는 공백을 쓸수 없습니다.");
+                return false;
+            }
+            return true;
+        }
+
+        
+    </script>
+
+
+</head>
+
+<body>
+    <!--모바일에서는 대부분 태그들이 px이아닌 %로 크기가 잡히므로
+      border나 padding입력 시 레이아웃이 깨지므로 box-sizing 설정 습관화가 필요 -->
+
+    <div id="container">
+        <div id="wrap">
+            <img id="logoimg" src="/image/dog_white.png">
+            <p class="logo_p">EduDOG</p>
+
+
+            <section>
+                <div class="loginbar">
+                    <form action="" method="POST" name="frm">
+                        <ul>
+                        <li><input type="text" name="id" id="id" placeholder="Id" required></li>
+                        <li><input type="password" placeholder="Ps" required></li>
+                        </ul>
+                    </form>
+                </div>
+            </section>
+            <a href="#"><button type="submit">로그인</button></a>
+
+            <div id="sns_conta">
+                <div id="sns_login">
+
+                    <div id="naver_id_login">
+                        <img src="/image/naver_btn.png">
+                    </div>
+
+                    <div class="g-signin2" data-onsuccess="onSignIn">
+                        <img src="/image/google.png">
+                        <a href="#" onclick="signOut();">Sign out</a>
+                    </div>
+
+                    <div>
+                        <a id="kakao-login-btn" href="javascript:loginWithKakao()">
+                            <img src="/image/kakao_button.png" alt="">
+                            <div id="result"></div>
+
+                            <a href='#' id='logout'>로그아웃</a>
+                            <a href='#' id='unlink'>회원탈퇴</a>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <p id="signin_p"><a href="/html/sign_in.html">계정이 없으신가요? 회원가입</a></p>
+            <p id="token-result"></p>
+
+            <div id="result">
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        //naver
+
+        var naver_id_login = new naver_id_login("gFCjmLwh_wYtEUPSBEj8", "http://lyk9583.dothome.co.kr/html/login.html");
+        var state = naver_id_login.getUniqState();
+        naver_id_login.setDomain("http://lyk9583.dothome.co.kr/html/login.html");
+        naver_id_login.setButton("green", 2, 40);
+        naver_id_login.setState(state);
+        naver_id_login.setPopup();
+        naver_id_login.init_naver_id_login();
+        function test(data) {
+            console.log(data);
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

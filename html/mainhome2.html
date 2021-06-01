@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--익스버전을 최신edge모드로 표시,모바일에서는 있어도그만 없어도그만.-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--뷰포트 확대축소 불가능 설정-->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <!--콘텐츠 아이폰 노치부분 커버-->
+    <meta name="viewport" content="viewport-fit=cover">
+    <!--아이폰 전화번호 링크화 방지-->
+    <meta name="format-detection" content="telephone=no">
+    <!--파비콘 (title옆의 icon)-->
+    <link rel="shortcut icon" href="/image/dog2.png">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+        }
+
+
+
+        @font-face {
+            font-family: 'md';
+            src: url('/font/Jua/Jua-Regular.ttf');
+        }
+
+
+        nav {
+            width: 100%;
+            height: 100px;
+            display: inline-block;
+            background-color: #FF9E0D;
+
+        }
+
+        #dogicon {
+            width: 6%;
+            margin-left: 2%;
+        }
+
+        #menu {
+            margin-left: 80%;
+            width: 5%;
+
+        }
+
+
+
+        nav p {
+            float: right;
+            text-decoration: underline;
+            margin-right: 4%;
+            font-size: 2em
+        }
+
+        section {
+            margin-top: 1.6em;
+        }
+
+        section img {
+            width: 7em;
+        }
+
+        #popup_img {
+            width: 40em;
+        }
+
+        #check img {
+            width: 2em;
+        }
+
+        header {
+            width: 100%;
+            height: 18em;
+            /* background-color: gainsboro; */
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-image: url('/image/dog_eat.jpg');
+        }
+
+
+        h5 {
+            padding-left: 3.5em;
+            padding-top: 2.3em;
+            font-size: 22px;
+            color: #FF9E0D;
+            font-family: 'md';
+
+        }
+
+        h4 {
+            padding-top: 0.4em;
+            padding-left: 1.3em;
+            padding-bottom: 0.6em;
+            color: #9F9F9F;
+            font-size: 25px;
+        }
+
+        #Q {
+            width: 2em;
+            height: 2em;
+            background-color: #FF9E0D;
+            border-radius: 2em;
+            padding-left: 0.5em;
+            padding-top: 0.3em;
+            color: white;
+            margin-left: 2em;
+            margin-top: 3em;
+            position: fixed;
+        }
+
+        #quiz {
+            width: 80%;
+            height: 3.5em;
+            border-radius: 0.4em;
+            margin: 0 auto;
+            color: white;
+            padding: 15px 17em;
+            background-color: gray;
+            opacity: 80%;
+        }
+
+
+        #logindata {
+            width: 100%;
+            height: 500px;
+            text-align: center;
+        }
+
+        #logindata p {
+            font-size: 35px;
+            margin-top: 8em;
+            font-weight: bold;
+            margin-bottom: 1em;
+        }
+
+        #logindata button {
+            width: 10em;
+            height: 3em;
+            background-color: #FF9E0D;
+            color: white;
+            font-size: 2em;
+            border: none;
+            border-radius: 2em;
+        }
+
+        #popup {
+            width: 100%;
+            height: 49.3em;
+            background-color: white;
+            text-align: center;
+
+        }
+
+        h2 {
+            font-size: 25px;
+            font-weight: bold;
+            padding-top: 2em;
+        }
+
+        span {
+            color: #FF9E0D;
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        #popup p {
+            padding-bottom: 1em;
+            padding-top: 0.5em;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #4F4F4F;
+            font-size: 20px;
+
+        }
+
+        #popup_img {
+            width: 100%;
+            height: 33em;
+        }
+
+        #check {
+            display: inline-block;
+        }
+
+        #remove {
+            float: right;
+            margin-right: 2em;
+            width: 2em;
+        }
+
+        input[type='checkbox'] {
+            width: 0px;
+            height: 0px;
+        }
+
+        input[type='checkbox']+label {
+            font-weight: normal;
+            padding-left: 30px;
+            background-image: url('/image/button_none_check.png');
+            background-position: 5px center;
+            background-repeat: no-repeat;
+            background-size: 16px;
+        }
+
+        input[type='checkbox']:checked+label {
+            background-image: url('/image/button_check.png');
+        }
+
+        footer {
+            width: 100%;
+            height: 8em;
+            display: inline-block;
+            box-shadow: 1px 0px 12px 10px gainsboro;
+            clear: both;
+        }
+
+        footer img {
+            width: 4.5em;
+            margin-left: 8.5em;
+            padding-top: 1.8em;
+        }
+
+        #dog_page {
+            display: inline-block;
+            text-align: center;
+            margin: 0 auto;
+            margin-left: 11em;
+            margin-right: 5em;
+            margin-bottom: 10.8em;
+
+        }
+
+
+        #dog_page img {
+            width: 11.6em;
+
+        }
+
+        h4 {
+            font-size: 2em;
+            font-weight: bold;
+            margin-right: 1.3em;
+        }
+
+        #dog_page p {
+            font-size: 20px;
+            color: #9F9F9F;
+        }
+
+        /*
+        1.
+        overflow:hidden 사용 시 아이폰 하위버전에서 적용되지않아 레이아웃이 깨질 우려가 있으니
+        position:fixed + 가로 세로 100%으로 크기를 지정하면 아이폰에서도 적용이됨
+        
+        2. min: width 320px;
+        현재 모바일 가로길이 최소 기종이 320px.
+        창크기를 아무리 축소시켜도 현재로서 320px 미만으로는 줄지않음 
+        
+        3.탭 하이라이트 컬러 변경
+        보통 모바일에서 a태그를 클릭시 background컬러가 blue로 나오는데,
+        이를 변경 시 사용
+
+        4.미디어 쿼리
+        */
+    </style>
+
+</head>
+
+<body>
+    <!--모바일에서는 대부분 태그들이 px이아닌 %로 크기가 잡히므로
+      border나 padding입력 시 레이아웃이 깨지므로 box-sizing 설정 습관화가 필요 -->
+
+
+    <nav>
+        <section>
+            <img id="dogicon" src="/image/dog_white.png">
+            <img id="menu" src="/image/menu_icon.png">
+        </section>
+    </nav>
+
+    <header>
+        <div id="Q">
+            Q.
+        </div>
+        <h5>반려견 상식 퀴즈</h5>
+        <h4>다음중 강아지의 건강에 <br> 위험을 줄수있는 음식은?</h4>
+        <div id="quiz">문제 풀고 이벤트 응모하러가기></div>
+    </header>
+
+
+    <div id="logindata">
+        <p>OOO님 <br>
+            아직 테스트를 <br>
+            완료하지 않으셨습니다.
+        </p>
+        <a href="/html/test.html"><button>테스트 하러가기</button></a>
+    </div>
+
+
+    <div id="dog_page">
+       <img src="/image/noneimage.png">
+        <h4>이름</h4>
+        <p>5살</p>
+    </div>
+
+    <div id="dog_page">
+        <img src="/image/noneimage.png">
+        <h4>이름</h4>
+        <p>5살</p>
+    </div>
+
+    <footer>
+        <img src="/image/home.png">
+        <img src="/image/bulb.png">
+        <a href="/html/hospi.html"><img src="/image/hospital.png"></a>
+        <img src="/image/door.png">
+    </footer>
+
+</body>
+
+</html>
